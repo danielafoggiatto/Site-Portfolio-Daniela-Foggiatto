@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato • Daniela Foggiatto</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Daniela Foggiatto</h1>
+
+            <nav id="navMenu" class="nav">
+                <a href="index.html">Sobre Mim</a>
+                <a href="experiencia.html">Experiência</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="certificacoes.html" >Certificações</a>
+                <a href="linkedin.html">Linkedin - Posts Profissionais</a>
+                <a class="active" href="contato.html">Contato</a>
+            </nav>
+
+            <button id="themeToggle" class="theme-btn">🌙</button>
+            <button id="mobileBtn" class="mobile-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container page-section contact-section">
+        <h2>Contato</h2>
+        <p class="subtitle">Vamos conversar? Me envie uma mensagem por qualquer canal abaixo 🤍</p>
+
+        <div class="contact-grid">
+
+            <a href="mailto:seuemail@example.com" class="contact-card">
+                <div class="icon">📩</div>
+                <div>
+                    <h3>Email</h3>
+                    <p>seuemail@example.com</p>
+                </div>
+            </a>
+
+            <a href="https://linkedin.com/in/seuperfil" target="_blank" class="contact-card">
+                <div class="icon">💼</div>
+                <div>
+                    <h3>LinkedIn</h3>
+                    <p>linkedin.com/in/seuperfil</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/seunome" target="_blank" class="contact-card">
+                <div class="icon">🐙</div>
+                <div>
+                    <h3>GitHub</h3>
+                    <p>github.com/seunome</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="footer">© 2025 - Seu Nome</footer>
+</body>
+</html>

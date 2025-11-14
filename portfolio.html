@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio • Daniela Foggiatto</title>
+
+    <!-- Fonte delicada -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Daniela Foggiatto</h1>
+
+            <nav id="navMenu" class="nav">
+                <a href="index.html">Sobre Mim</a>
+                <a href="experiencia.html">Experiência</a>
+                <a href="portfolio.html" class="active">Portfólio</a>
+                <a href="certificacoes.html" >Certificações</a>
+                <a href="linkedin.html">Linkedin - Posts Profissionais</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <button id="themeToggle" class="theme-btn">🌙</button>
+            <button id="mobileBtn" class="mobile-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container page-section">
+
+        <h2 class="page-title">Portfólio</h2>
+        <p class="subtitle">Projetos focados em automação de testes, backend e desenvolvimento moderno.</p>
+
+        <div class="projects-grid">
+
+            <!-- Projeto 1 -->
+            <div class="project-card">
+                <div class="mockup">
+                    <img src="img/mockup1.png" alt="Automação com Playwright">
+                </div>
+
+                <h3>Automação de Testes — Playwright</h3>
+                <p class="description">
+                    Suíte completa de testes E2E com Page Objects, relatórios e execução paralela.
+                </p>
+
+                <div class="tags">
+                    <span>Playwright</span>
+                    <span>TypeScript</span>
+                    <span>CI/CD</span>
+                    <span>Automação</span>
+                </div>
+
+                <div class="buttons">
+                    <a class="btn" href="#">Ver Código</a>
+                    <a class="btn-outline" href="#">Demo</a>
+                </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="project-card">
+                <div class="mockup">
+                    <img src="img/mockup2.png" alt="API FastAPI">
+                </div>
+
+                <h3>API REST — Sistema Médico</h3>
+                <p class="description">
+                    API em Python com FastAPI, autenticação JWT, documentação automática e testes.
+                </p>
+
+                <div class="tags">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>SQL</span>
+                    <span>OOP</span>
+                </div>
+
+                <div class="buttons">
+                    <a class="btn" href="#">Ver Código</a>
+                    <a class="btn-outline" href="#">Testar API</a>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="project-card">
+                <div class="mockup">
+                    <img src="img/mockup3.png" alt="Sistema Carrinho">
+                </div>
+
+                <h3>Sistema de Carrinho — JavaScript</h3>
+                <p class="description">
+                    Carrinho completo com filtros, localStorage e UI interativa.
+                </p>
+
+                <div class="tags">
+                    <span>JavaScript</span>
+                    <span>LocalStorage</span>
+                    <span>UI/UX</span>
+                    <span>Frontend</span>
+                </div>
+
+                <div class="buttons">
+                    <a class="btn" href="#">Ver Código</a>
+                    <a class="btn-outline" href="#">Ver Demo</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">© 2025 - Daniela Foggiatto</footer>
+</body>
+</html>

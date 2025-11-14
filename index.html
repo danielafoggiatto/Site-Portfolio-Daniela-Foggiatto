@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        // Aplicar tema imediatamente antes do CSS carregar
+        (function() {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sobre Mim • Daniela Foggiatto</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Daniela Foggiatto</h1>
+
+            <nav class="nav" id="navMenu">
+                <a class="active" href="index.html">Sobre Mim</a>
+                <a href="experiencia.html">Experiência</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="certificacoes.html" >Certificações</a>
+                <a href="linkedin.html">Linkedin - Posts Profissionais</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <button id="themeToggle" class="theme-btn">🌙</button>
+            <button id="mobileBtn" class="mobile-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container page-section about-page">
+
+        <div class="about-wrapper">
+            <img class="profile-photo" 
+                src="https://media.licdn.com/dms/image/v2/D4D03AQFvyWdMcc_xnw/profile-displayphoto-scale_400_400/B4DZqDgPd4KQAg-/0/1763142860372?e=1764806400&v=beta&t=twOSvX6sZK16zJVs_A7pQLQ0w45phUy2usSSfJLTL2Y" 
+                alt="Foto de Daniela Foggiatto">
+
+            <div class="about-text">
+                <p>
+                    Sou <strong>QA Test Automation</strong> em Florianópolis/SC, trabalhando com automação de testes 
+                    e garantindo que cada entrega saia com a qualidade que os times precisam. Domínio em 
+                    <strong>Playwright (TypeScript, JavaScript e Python)</strong>, Pytest, Selenium, Cypress 
+                    e BDD com Cucumber/Gherkin.
+                </p>
+
+                <p>
+                    Minha trajetória sempre foi conectada à tecnologia, desde as primeiras experiências com 
+                    eletrônica e sistemas. Hoje, transformo essa curiosidade em prática por meio de 
+                    <strong>programação, automação de testes e desenvolvimento web</strong>, sempre com foco 
+                    em qualidade, clareza e eficiência.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-title">Minhas principais competências</h3>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <span class="icon">🧪</span>
+                <h4>QA e Automação</h4>
+                <p>Testes funcionais, regressão, integração, E2E, smoke, usabilidade, exploratórios e estratégias de validação de qualidade.</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="icon">🤖</span>
+                <h4>Playwright, Selenium e Cypress</h4>
+                <p>
+                    Experiência em escrita de scripts robustos em Python, JavaScript e TypeScript, manutenção de suites e execução em diferentes ambientes.
+                </p>
+            </div>
+
+
+            <div class="skill-card">
+                <span class="icon">🔁</span>
+                <h4>Integração Contínua (CI/CD)</h4>
+                <p>Configuração e execução de pipelines com testes automatizados, versionamento e entrega contínua.</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="icon">🏃‍♂️</span>
+                <h4>Metodologias Ágeis</h4>
+                <p>Experiência com Scrum e Kanban, cerimônias ágeis, priorização, planejamento e colaboração contínua.</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="icon">📘</span>
+                <h4>BDD / Gherkin</h4>
+                <p>Escrita de cenários orientados a comportamento, alinhamento com regras de negócio e uso de padrões Given/When/Then.</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="icon">🏗️</span>
+                <h4>Arquitetura e Padrões</h4>
+                <p>
+                    Page Object Model (POM), organização em camadas, clean code e boas práticas para testes escaláveis, legíveis e de fácil manutenção.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <span class="icon">💻</span>
+                <h4>Backend</h4>
+                <p>C#, Python e JavaScript. APIs, bancos de dados e orientação a objetos aplicada.</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="icon">🎨</span>
+                <h4>Frontend</h4>
+                <p>HTML, CSS e JavaScript. Criação de interfaces responsivas com atenção à experiência do usuário.</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="icon">📐</span>
+                <h4>Lógica de Programação</h4>
+                <p>Lógica avançada aplicada à automação, resolução de problemas e desenvolvimento estruturado.</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="icon">📊</span>
+                <h4>SQL & Bancos de Dados</h4>
+                <p>Consultas SQL, modelagem de dados, criação de tabelas e manipulação de informações para análise e validação.</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="icon">🔌</span>
+                <h4>Testes de API</h4>
+                <p>
+                    Testes de API REST utilizando Python, Postman e ferramentas de automação. Validação de endpoints,
+                    contratos, status codes e integração entre serviços.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <span class="icon">⚙️</span>
+                <h4>Backend</h4>
+                <p>
+                    Desenvolvimento e testes em aplicações backend com Python, C# e JavaScript. Experiência com APIs,
+                    bancos de dados, modelagem e regras de negócio.
+                </p>
+            </div>
+
+
+        </div>
+
+        <h3 class="section-title">Atualmente estudando</h3>
+        <ul class="styled-list">
+            <li>Análise e Desenvolvimento de Sistemas (desde 07/2024)</li>
+            <li>Aprofundamento em automação com Playwright</li>
+            <li>Análise e Desenvolvimento de Sistemas (desde 07/2024)</li>
+            <li>Aprofundamento em automação com Playwright</li>
+            <li>UNIX for Testers – Automação de UNIX em testes (Selenium)</li>
+            <li>Unit Testing em C#</li>
+            <li>Curso de JUnit 5</li>
+            <li>Automatizando Testes de Player de Música com Robot Framework</li>
+            <li>QA Automation Web · Mobile · REST</li>
+            <li>Teste unitário com QUnit</li>
+        </ul>
+
+        <h3 class="section-title">Soft Skills</h3>
+
+        <div class="chips">
+            <span class="chip">Comunicação clara</span>
+            <span class="chip">Senso analítico</span>
+            <span class="chip">Organização</span>
+            <span class="chip">Autonomia</span>
+            <span class="chip">Foco em qualidade</span>
+            <span class="chip">Responsabilidade</span>
+            <span class="chip">Comprometimento</span>
+            <span class="chip">Resolução de problemas</span>
+            <span class="chip">Atenção aos detalhes</span>
+            <span class="chip">Aprendizagem rápida</span>
+        </div>
+
+    </main>
+
+    <footer class="footer">© 2025 - Daniela Foggiatto</footer>
+</body>
+</html>

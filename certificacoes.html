@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificações • Daniela Foggiatto</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Daniela Foggiatto</h1>
+
+            <nav id="navMenu" class="nav">
+                <a href="index.html">Sobre Mim</a>
+                <a href="experiencia.html">Experiência</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="certificacoes.html" class="active">Certificações</a>
+                <a href="linkedin.html">Linkedin - Posts Profissionais</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <button id="themeToggle" class="theme-btn">🌙</button>
+            <button id="mobileBtn" class="mobile-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container page-section">
+
+        <h2 class="page-title">Certificações</h2>
+        <p class="subtitle">Cursos concluídos e especializações em tecnologia, QA, automação, backend e desenvolvimento moderno.</p>
+
+        <div class="projects-grid">
+
+            <!-- MODELO DE CARD 1 — COM IMAGEM -->
+            <div class="project-card">
+                <div class="mockup">
+                    <img src="img/cert1.jpg" alt="Certificado 1">
+                </div>
+
+                <h3>Certificado Exemplo — Udemy</h3>
+                <p class="description">
+                    Curso completo com 40h de conteúdo, cobrindo fundamentos, práticas e exercícios.
+                </p>
+
+                <div class="tags">
+                    <span>Udemy</span>
+                    <span>2025</span>
+                </div>
+
+                <div class="buttons">
+                    <a class="btn" href="#" target="_blank">Abrir Certificado</a>
+                </div>
+            </div>
+
+            <!-- MODELO DE CARD 2 — SEM IMAGEM (LINK YOUTUBE OU UDEMY) -->
+            <div class="project-card">
+                <div class="mockup">
+                    <img src="img/thumb-youtube.jpg" alt="Miniatura">
+                </div>
+
+                <h3>Workshop — Automação de Testes</h3>
+                <p class="description">
+                    Treinamento prático ao vivo com exercícios e demonstrações.
+                </p>
+
+                <div class="tags">
+                    <span>YouTube</span>
+                    <span>Ao Vivo</span>
+                </div>
+
+                <div class="buttons">
+                    <a class="btn-outline" href="#" target="_blank">Assistir</a>
+                </div>
+            </div>
+
+            <!-- MODELO DE CARD 3 — SEM IMAGEM -->
+            <div class="project-card">
+                <h3>Certificação Técnica — QA Fundamentals</h3>
+                <p class="description">
+                    Conteúdo abordando testes funcionais, não funcionais, estratégias e planejamento.
+                </p>
+
+                <div class="tags">
+                    <span>Certificado</span>
+                    <span>QA</span>
+                </div>
+
+                <div class="buttons">
+                    <a class="btn" href="#" target="_blank">Visualizar PDF</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">© 2025 - Daniela Foggiatto</footer>
+</body>
+</html>

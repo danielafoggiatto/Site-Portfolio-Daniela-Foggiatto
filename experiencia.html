@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        // Aplica o tema antes do CSS carregar (previne o "flash")
+        (function () {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Experiência • Daniela Foggiatto</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <h1 class="logo">Daniela Foggiatto</h1>
+
+        <nav id="navMenu" class="nav">
+            <a href="index.html">Sobre Mim</a>
+            <a href="experiencia.html" class="active">Experiência</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="certificacoes.html" >Certificações</a>
+            <a href="linkedin.html">Linkedin - Posts Profissionais</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-btn">🌙</button>
+        <button id="mobileBtn" class="mobile-btn">☰</button>
+    </div>
+</header>
+
+<main class="container page-section">
+
+    <h2 class="page-title">Minha Experiência</h2>
+    <p class="page-subtitle">Um resumo claro e elegante da minha trajetória profissional na área de QA e tecnologia.</p>
+
+    <!-- TIMELINE -->
+    <section class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>QA Test Automation — Nec Plus Ultra</h3>
+                <span class="timeline-date">Setembro/2025 • Atual</span>
+
+                <p>
+                    Atuação com automação de testes, garantindo a qualidade das entregas em diferentes projetos.
+                </p>
+
+                <ul>
+                    <li>Automação com Playwright (TS, JS, Python)</li>
+                    <li>Testes funcionais, regressão, integração e E2E</li>
+                    <li>Pytest, Selenium, Cypress, BDD</li>
+                    <li>Integração com pipelines CI/CD</li>
+                    <li>Validação ponta a ponta de funcionalidades sensíveis</li>
+                    <li>Validação ponta a ponta de funcionalidades sensíveis</li>
+                    <li>Uso de waits inteligentes e técnicas para reduzir flakiness</li>
+                    <li>
+                        Implementação de automações escaláveis utilizando Page Object Model (POM), arquitetura em camadas, 
+                        princípios de Clean Code e criação de helpers/utils para reduzir duplicidade — garantindo testes 
+                        organizados, reutilizáveis, fáceis de manter e com código continuamente refatorado.
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Projetos Acadêmicos e Estudos</h3>
+                <span class="timeline-date">Julho/2024 • Atual</span>
+
+                <ul class="projects-list">
+                    <li>
+                        <strong>Test Automation Practice Page — Selenium, Python</strong><br>
+                        Automação de cenários completos para página de prática, incluindo waits, validações e estrutura organizada.  
+                        <a class="proj-link" target="_blank"  href="https://github.com/danielafoggiatto/Test-Automation-Practice-Page">Ver projeto →</a>
+                    </li>
+
+                    <li>
+                        <strong>SauceDemo (Page Objects) — Selenium, Python</strong><br>
+                        Framework seguindo Page Object Model (POM), com login, inventário, carrinho e fluxo completo de compras.  
+                        <a class="proj-link" target="_blank"  href="https://github.com/danielafoggiatto/SauceDemo_with_pages---Portfolio-QA">Ver projeto →</a>
+                    </li>
+
+                    <li>
+                        <strong>Automation Exercices — Selenium, Python</strong><br>
+                        Coleção de exercícios de automação para aprimorar técnicas de XPath, asserts, page actions e estruturação.  
+                        <a class="proj-link" target="_blank"  href="https://github.com/danielafoggiatto/AUTOMATION-EXERCICE---Portfolio-QA">Ver projeto →</a>
+                    </li>
+                    <li>
+                        <strong>Clínica Médica (2024) — C#</strong><br>
+                        Sistema em camadas com cadastro de pacientes, médicos e agendamentos.  
+                        <a class="proj-link" target="_blank"  href="https://github.com/danielafoggiatto/Sitema-de-Agendamento---Clinica-Medica">Ver projeto →</a>
+                    </li>
+
+                    <li>
+                        <strong>Biblioteca Console (2023) — C#</strong><br>
+                        Gerenciamento de livros e usuários utilizando OOP, encapsulamento e polimorfismo.  
+                        <a class="proj-link" target="_blank"  href="https://github.com/danielafoggiatto/Biblioteca_Console">Ver projeto →</a>
+                    </li>
+
+                    <li>
+                        <strong>Sistema de Agenda (2023) — C#</strong><br>
+                        Agenda de compromissos com serialização JSON, tratamento de exceções e estrutura OOP.  
+                        <a class="proj-link" target="_blank"  href="https://github.com/danielafoggiatto/Agenda_de_Compromissos">Ver projeto →</a>
+                    </li>
+
+                    <li>
+                        <strong>Sophia Photography (2024) — HTML, CSS, JS</strong><br>
+                        Site autoral com jQuery, Bootstrap e galeria responsiva.  
+                        <a class="proj-link" target="_blank"  href="https://danielafoggiatto.github.io/Sophia-Photography--Projeto-Autoral/">Acessar site →</a>
+                    </li>
+
+                    <li>
+                        <strong>Clone Microsoft (2024) — HTML, CSS, JS</strong><br>
+                        Interface inspirada no site da Microsoft, focada em semântica e UX.  
+                        <a class="proj-link" target="_blank"  href="https://github.com/danielafoggiatto/Microsoft">Ver projeto →</a>
+                    </li>
+
+                    <li>
+                        <strong>Clone Netflix (2024) — HTML, CSS, JS</strong><br>
+                        Layout responsivo com carrossel, boas práticas de CSS e estrutura clara.  
+                        <a class="proj-link" target="_blank"  href="https://github.com/danielafoggiatto/Netflix">Ver projeto →</a>
+                    </li>
+
+                    <li>
+                        <strong>Candlelight (2025) — HTML, CSS, JS, React, C#</strong><br>
+                        E-commerce full stack (em andamento), unindo frontend moderno e backend em C#.  
+                        <a class="proj-link" target="_blank"  href="https://github.com/danielafoggiatto/Candlelight">Ver projeto →</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CARDS DE COMPETÊNCIAS -->
+    <h2 class="section-title">Competências Aplicadas</h2>
+
+    <div class="experience-cards">
+
+        <div class="exp-card">
+            <div class="exp-icon">🧪</div>
+            <h3>Automação de Testes</h3>
+            <p>Criação de suítes de testes completas, cenários avançados e pipelines estruturadas.</p>
+        </div>
+
+        <div class="exp-card">
+            <div class="exp-icon">⚙️</div>
+            <h3>CI/CD & Git</h3>
+            <p>Integração contínua, versionamento, branches e revisão de código.</p>
+        </div>
+        <div class="exp-card">
+            <div class="exp-icon">🕵️‍♀️</div>
+            <h3>Análise Técnica & Debug</h3>
+            <p>Identificação e investigação de bugs, leitura de logs, reprodução de cenários críticos e análise de root cause.</p>
+        </div>
+        <div class="exp-card">
+            <div class="exp-icon">📋</div>
+            <h3>Controle de Qualidade & Processos</h3>
+            <p>Aplicação de testes funcionais, regressão, smoke, integração e E2E, seguindo boas práticas de QA.</p>
+        </div>
+        <div class="exp-card">
+            <div class="exp-icon">📊</div>
+            <h3>Observabilidade & Logs</h3>
+            <p>Monitoramento de eventos, análise de logs e rastreamento de erros para diagnóstico rápido e preciso.</p>
+        </div>
+        <div class="exp-card">
+            <div class="exp-icon">📊</div>
+            <h3>Observabilidade & Logs</h3>
+            <p>Monitoramento de eventos, análise de logs e rastreamento de erros para diagnóstico rápido e preciso.</p>
+        </div>
+        <div class="exp-card">
+            <div class="exp-icon">🎨</div>
+            <h3>Frontend & UI Testing</h3>
+            <p>Testes e validações em interfaces web, DOM, componentes, comportamento visual e fluxos completos no navegador.</p>
+        </div>
+        <div class="exp-card">
+            <div class="exp-icon">💻</div>
+            <h3>Backend & APIs</h3>
+            <p>Desenvolvimento e testes de APIs REST, lógica avançada e SQL.</p>
+        </div>
+        <div class="exp-card">
+            <div class="exp-icon">🗄️</div>
+            <h3>Banco de Dados & SQL</h3>
+            <p>Criação de consultas, validação de dados, apoio à automação e testes com SQL para garantir consistência do sistema.</p>
+        </div>
+
+
+
+    </div>
+
+</main>
+
+<footer class="footer">© 2025 - Seu Nome</footer>
+
+</body>
+</html>

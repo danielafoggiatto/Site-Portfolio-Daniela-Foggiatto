@@ -54,3 +54,39 @@ if (navMenu) {
         });
     });
 }
+
+
+function copyToClipboard(id, btn) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        btn.classList.add('copied');
+        setTimeout(() => btn.classList.remove('copied'), 1500);
+    });
+}
+
+
+const demoBtns = document.querySelectorAll('.demo-btn');
+const modal = document.getElementById('codeModal');
+const modalCode = document.getElementById('modalCode');
+const closeBtn = modal.querySelector('.close');
+
+// Abre o modal e insere o snippet
+demoBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        modalCode.textContent = btn.dataset.snippet;
+        modal.style.display = 'block';
+    });
+});
+
+// Fecha o modal clicando no "x"
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Fecha o modal clicando fora do conteúdo
+window.addEventListener('click', (e) => {
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
+});
+

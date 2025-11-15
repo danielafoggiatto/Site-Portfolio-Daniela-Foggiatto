@@ -43,33 +43,45 @@
 
         <div class="contact-grid">
 
-            <a href="mailto:seuemail@example.com" class="contact-card">
+            <div class="contact-card">
+                <div class="icon">📱</div>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p id="whatsapp-number">+55 48 99907-6322</p>
+                </div>
+                <button class="copy-btn" onclick="copyToClipboard('whatsapp-number', this)">Copiar</button>
+            </div>
+
+            <div class="contact-card">
                 <div class="icon">📩</div>
                 <div>
                     <h3>Email</h3>
-                    <p>seuemail@example.com</p>
+                    <p id="email-address">foggiattodaniela@hotmail.com</p>
                 </div>
-            </a>
+                <button class="copy-btn" onclick="copyToClipboard('email-address', this)">Copiar</button>
+            </div>
 
-            <a href="https://linkedin.com/in/seuperfil" target="_blank" class="contact-card">
+            <div class="contact-card">
                 <div class="icon">💼</div>
                 <div>
                     <h3>LinkedIn</h3>
-                    <p>linkedin.com/in/seuperfil</p>
+                    <p id="linkedin-link">linkedin.com/in/daniela-foggiatto</p>
                 </div>
-            </a>
+                <button class="copy-btn" onclick="copyToClipboard('linkedin-link', this)">Copiar</button>
+            </div>
 
-            <a href="https://github.com/seunome" target="_blank" class="contact-card">
+            <div class="contact-card">
                 <div class="icon">🐙</div>
                 <div>
                     <h3>GitHub</h3>
-                    <p>github.com/seunome</p>
+                    <p id="github-link">github.com/danielafoggiatto</p>
                 </div>
-            </a>
+                <button class="copy-btn" onclick="copyToClipboard('github-link', this)">Copiar</button>
+            </div>
 
         </div>
     </main>
 
-    <footer class="footer">© 2025 - Seu Nome</footer>
+    <footer class="footer">© 2025 - Daniela Foggiatto</footer>
 </body>
 </html>

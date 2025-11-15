@@ -48,76 +48,420 @@
         <div class="projects-grid">
 
             <!-- Projeto 1 -->
+            <!-- CARD: Playwright -->
             <div class="project-card">
-                <div class="mockup">
-                    <img src="img/mockup1.png" alt="Automação com Playwright">
-                </div>
-
                 <h3>Automação de Testes — Playwright</h3>
                 <p class="description">
                     Suíte completa de testes E2E com Page Objects, relatórios e execução paralela.
                 </p>
-
                 <div class="tags">
                     <span>Playwright</span>
                     <span>TypeScript</span>
                     <span>CI/CD</span>
                     <span>Automação</span>
                 </div>
-
                 <div class="buttons">
-                    <a class="btn" href="#">Ver Código</a>
-                    <a class="btn-outline" href="#">Demo</a>
+                    <a class="btn-outline code-btn" href="#" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="// Playwright snippet exemplo
+            import { test, expect } from '@playwright/test';
+
+            test('login test', async ({ page }) => {
+            await page.goto('https://example.com');
+            await page.fill('#user', 'admin');
+            await page.fill('#pass', '1234');
+            await page.click('#login');
+            await expect(page.locator('text=Dashboard')).toBeVisible();
+            });">Demo</button>
                 </div>
             </div>
 
-            <!-- Projeto 2 -->
+            <!-- CARD: Cypress -->
             <div class="project-card">
-                <div class="mockup">
-                    <img src="img/mockup2.png" alt="API FastAPI">
-                </div>
-
-                <h3>API REST — Sistema Médico</h3>
+                <h3>Comandos Cypress</h3>
                 <p class="description">
-                    API em Python com FastAPI, autenticação JWT, documentação automática e testes.
+                    Biblioteca de comandos customizados em Cypress para testes automatizados mais expressivos e reutilizáveis.
                 </p>
-
                 <div class="tags">
+                    <span>Cypress</span>
+                    <span>JavaScript</span>
+                    <span>Automação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Cypress-Commands" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="// Exemplo de comando customizado
+            Cypress.Commands.add('login', (email, senha) => {
+                cy.get('#email').type(email);
+                cy.get('#senha').type(senha);
+                cy.get('#entrar').click();
+            });">Demo</button>
+                </div>
+            </div>
+
+            <!-- CARD: Selenium UI -->
+            <div class="project-card">
+                <h3>Testes de Interface — Selenium</h3>
+                <p class="description">
+                    Automação de testes de interface com Selenium, explorando diferentes técnicas de localização de elementos e interações UI.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
                     <span>Python</span>
-                    <span>FastAPI</span>
-                    <span>SQL</span>
+                    <span>UI Testing</span>
+                    <span>Automação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/testes-de-interface-selenium" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="# Exemplo de teste Selenium
+            from selenium import webdriver
+            from selenium.webdriver.common.by import By
+
+            driver = webdriver.Chrome()
+            driver.get('https://example.com')
+            driver.find_element(By.ID, 'login').send_keys('usuario')
+            driver.find_element(By.ID, 'senha').send_keys('1234')
+            driver.find_element(By.ID, 'entrar').click()
+            driver.quit()">Demo</button>
+                </div>
+            </div>
+
+            <!-- CARD: Testes de Comparação -->
+           <div class="project-card">
+                <h3>Testes de Comparação — Automação Completa</h3>
+                <p class="description">
+                    Testes automatizados robustos envolvendo cenários complexos de filtros, validação de dados e lógica avançada de comparação. Um projeto completo que combina automação e programação de forma estratégica.
+                </p>
+                <div class="tags">
+                    <span>Automação</span>
+                    <span>Python</span>
+                    <span>Testes de Filtros</span>
+                    <span>Lógica e Comparação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/testes-de-comparacao-completo" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="# Exemplo de teste de comparação em Python
+            def comparar_listas(lista1, lista2):
+                return lista1 == lista2
+
+            print(comparar_listas([1,2,3], [1,2,3]))
+            print(comparar_listas([1,2], [1,2,3]))">Demo</button>
+                </div>
+            </div>
+
+
+            <!-- CARD: Test Automation Practice Page -->
+            <div class="project-card">
+                <h3>Test Automation Practice Page</h3>
+                <p class="description">
+                    Automação completa com waits inteligentes, asserts e estrutura organizada em Selenium + Python.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>Python</span>
+                    <span>QA</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Test-Automation-Practice-Page" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="# Exemplo de automação Selenium + Python
+            from selenium import webdriver
+
+            driver = webdriver.Chrome()
+            driver.get('https://example.com')
+            print(driver.title)
+            driver.quit()">Demo</button>
+                </div>
+            </div>
+            <!-- CI com GitHub Actions — Automação -->
+            <div class="project-card">
+                <h3>CI com GitHub Actions — Automação</h3>
+                <p class="description">
+                    Exemplos práticos de workflows GitHub Actions para automação de testes, integração contínua e execução de scripts, com YAML simples e fácil de entender.
+                </p>
+                <div class="tags">
+                    <span>GitHub Actions</span>
+                    <span>CI/CD</span>
+                    <span>Automação</span>
+                    <span>DevOps</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Descomplicando-GitHub-Actions" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="# Exemplo de workflow GitHub Actions
+            name: CI
+            on: [push]
+            jobs:
+            build:
+                runs-on: ubuntu-latest
+                steps:
+                - uses: actions/checkout@v3
+                - name: Run tests
+                    run: echo 'Testes executados'">Demo</button>
+                </div>
+            </div>
+
+            <!-- Teste com Cucumber + Playwright -->
+            <div class="project-card">
+                <h3>Teste com Cucumber + Playwright</h3>
+                <p class="description">
+                    Automação de testes E2E com Playwright usando Cucumber (BDD) e TypeScript, organizando cenários de forma clara e legível.
+                </p>
+                <div class="tags">
+                    <span>Playwright</span>
+                    <span>Cucumber</span>
+                    <span>TypeScript</span>
+                    <span>BDD</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Teste-com-Cucumber-Playwright-TS" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="// Exemplo Playwright + Cucumber
+            Given('Acesso a página', () => {
+                await page.goto('https://example.com');
+            });">Demo</button>
+                </div>
+            </div>
+
+            <!-- SauceDemo — Page Object Model -->
+            <div class="project-card">
+                <h3>SauceDemo — Page Object Model</h3>
+                <p class="description">
+                    Framework POM com login, inventário, carrinho e fluxo completo de compras automatizado.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>Python</span>
+                    <span>POM</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/SauceDemo_with_pages---Portfolio-QA" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="# Exemplo POM Selenium
+            from pages.login_page import LoginPage
+            login = LoginPage(driver)
+            login.login('user', 'senha')">Demo</button>
+                </div>
+            </div>
+
+            <!-- Testes — DemoQA Automação -->
+            <div class="project-card">
+                <h3>Testes — DemoQA Automação</h3>
+                <p class="description">
+                    Automação de interface no site DemoQA, com testes de botões, formulários, alertas e interação com componentes.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>UI Testing</span>
+                    <span>JavaScript</span>
+                    <span>Automação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/DemoQA---Portfolio-QA" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="// Exemplo teste DemoQA
+            cy.visit('https://demoqa.com')
+            cy.get('#submit').click()">Demo</button>
+                </div>
+            </div>
+
+            <!-- Exercícios QA -->
+            <div class="project-card">
+                <h3>Exercícios QA</h3>
+                <p class="description">
+                    Conjunto de exercícios para praticar testes automatizados e manuais, cobrindo validação, assertions e fluxos típicos de QA.
+                </p>
+                <div class="tags">
+                    <span>QA</span>
+                    <span>Testes</span>
+                    <span>Automação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Exercicios-QA_teste" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="# Exemplo exercício QA
+            assert 2 + 2 == 4
+            assert 'Teste' in 'Testes automatizados'">Demo</button>
+                </div>
+            </div>
+
+            <!-- Testes Manuais — Tester QA -->
+            <div class="project-card">
+                <h3>Testes Manuais — Tester QA</h3>
+                <p class="description">
+                    Conjunto organizado de casos de teste manuais, cobrindo cenários funcionais, exploratórios e testes de borda, com documentação clara e reproduzível.
+                </p>
+                <div class="tags">
+                    <span>QA</span>
+                    <span>Testes Manuais</span>
+                    <span>Documentação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Tester-QA" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="<!-- Exemplo teste manual
+            Caso de teste: login inválido
+            Passos: abrir página, preencher usuário incorreto, clicar entrar, validar mensagem de erro">Demo</button>
+                </div>
+            </div>
+
+            <!-- Automation Exercises -->
+            <div class="project-card">
+                <h3>Automation Exercises</h3>
+                <p class="description">
+                    Coleção de exercícios focando em XPath, asserts, page actions e boas práticas de automação.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>Python</span>
+                    <span>QA</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/AUTOMATION-EXERCICE---Portfolio-QA" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="# Exemplo XPath Selenium
+            element = driver.find_element(By.XPATH, '//button[@id=\"submit\"]')
+            element.click()">Demo</button>
+                </div>
+            </div>
+
+            <!-- Clínica Médica — C# -->
+            <div class="project-card">
+                <h3>Clínica Médica — C#</h3>
+                <p class="description">
+                    Sistema em camadas com cadastro de médicos, pacientes e agendamentos.
+                </p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>OOP</span>
+                    <span>Camadas</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Sitema-de-Agendamento---Clinica-Medica" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="// Exemplo C# cadastro médico
+            Medico medico = new Medico();
+            medico.Nome = 'Dr. João';
+            Console.WriteLine(medico.Nome);">Demo</button>
+                </div>
+            </div>
+
+            <!-- Biblioteca Console — C# -->
+            <div class="project-card">
+                <h3>Biblioteca Console — C#</h3>
+                <p class="description">
+                    Sistema com OOP, encapsulamento, polimorfismo e controle de usuários/livros.
+                </p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>OOP</span>
+                    <span>Console</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Biblioteca_Console" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="// Exemplo C# biblioteca console
+            Livro livro = new Livro();
+            livro.Titulo = 'C# Básico';
+            Console.WriteLine(livro.Titulo);">Demo</button>
+                </div>
+            </div>
+
+            <!-- Sistema de Agenda — C# -->
+            <div class="project-card">
+                <h3>Sistema de Agenda — C#</h3>
+                <p class="description">
+                    Agenda de compromissos com JSON, exceções e arquitetura limpa em C#.
+                </p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>JSON</span>
                     <span>OOP</span>
                 </div>
-
                 <div class="buttons">
-                    <a class="btn" href="#">Ver Código</a>
-                    <a class="btn-outline" href="#">Testar API</a>
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Agenda_de_Compromissos" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="// Exemplo C# agenda
+            var compromisso = new Compromisso { Titulo = 'Reunião', Data = DateTime.Now };
+            Console.WriteLine(compromisso.Titulo);">Demo</button>
                 </div>
             </div>
 
-            <!-- Projeto 3 -->
+            <!-- Clone Microsoft -->
             <div class="project-card">
-                <div class="mockup">
-                    <img src="img/mockup3.png" alt="Sistema Carrinho">
-                </div>
-
-                <h3>Sistema de Carrinho — JavaScript</h3>
+                <h3>Clone Microsoft</h3>
                 <p class="description">
-                    Carrinho completo com filtros, localStorage e UI interativa.
+                    Interface moderna inspirada no site oficial da Microsoft.
                 </p>
-
                 <div class="tags">
-                    <span>JavaScript</span>
-                    <span>LocalStorage</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
                     <span>UI/UX</span>
-                    <span>Frontend</span>
                 </div>
-
                 <div class="buttons">
-                    <a class="btn" href="#">Ver Código</a>
-                    <a class="btn-outline" href="#">Ver Demo</a>
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Microsoft" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="<!-- Exemplo Clone Microsoft -->
+            Abra o site localmente e explore layout responsivo e navegação moderna.">Demo</button>
                 </div>
             </div>
+
+            <!-- Clone Netflix -->
+            <div class="project-card">
+                <h3>Clone Netflix</h3>
+                <p class="description">
+                    Layout responsivo com carrossel e efeitos modernos.
+                </p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Netflix" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="<!-- Exemplo Clone Netflix -->
+            Abra o site e teste o carrossel, hover em cards e responsividade.">Demo</button>
+                </div>
+            </div>
+
+            <!-- Candlelight — E-commerce -->
+            <div class="project-card">
+                <h3>Candlelight — E-commerce</h3>
+                <p class="description">
+                    E-commerce moderno combinando Html, Css e JavaScript
+                </p>
+                <div class="tags">
+                    <span>Html</span>
+                    <span>Css</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Candlelight" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="<!-- Exemplo E-commerce Candlelight -->
+            Abra o site, explore produtos e interações com JS e CSS.">Demo</button>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <h3>Sophia Photography</h3>
+                <p class="description">
+                    Site autoral com jQuery, Bootstrap e galeria responsiva.
+                </p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Sophia-Photography--Projeto-Autoral/" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="<!-- Exemplo de visualização do site -->
+            Visite a galeria, veja efeitos de hover e navegação responsiva no site.">Demo</button>
+                </div>
+            </div>
+
+
+            <!-- MODAL ÚNICO -->
+            <div id="codeModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <pre class="code-snippet"><code id="modalCode"></code></pre>
+                </div>
+            </div>
+
+
+
+
 
         </div>
     </main>

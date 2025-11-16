@@ -9,11 +9,20 @@
     --card: #ffffff;
     --header: #ffffffcc;
     --shadow: 0 4px 14px rgba(0,0,0,0.08);
+    
 }
 .studies-list li strong:first-of-type {
-    color: #8B5CF6; /* Roxo vibrante */
-    font-size: 1.1em; /* Leve destaque no tamanho */
+    color: #a240b5; /* Lilás mais limpo e forte */
+    font-size: 1.12em;
+    font-weight: 600;
+    /* Toque moderno */
+    letter-spacing: 0.3px;
+    /* destaque suave */
+    background: rgba(191, 73, 207, 0.116);
+    padding: 2px 6px;
+    border-radius: 6px;
 }
+
 
 html.dark {
     --bg: #1a1a1a;
@@ -84,6 +93,130 @@ p {
     text-decoration: underline;
     color: #6af087;
 }
+
+
+
+
+
+
+/* Card Certificação - Adaptado para Dark/Light */
+.cert-card { 
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 14px;
+
+  background: var(--card);
+
+  /* sombra mais forte */
+  box-shadow: 0 15px 20px rgba(37, 1, 49, 0.12);
+
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+  gap: 16px;
+}
+
+.cert-card a {
+  display: flex;
+  text-decoration: none;
+  color: var(--text);
+  width: 100%;
+}
+
+
+
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cert-info h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 6px 0px;
+    border-radius: 8px;
+
+}
+.cert-btn-outline {
+    display: block;           /* Faz o botão ocupar linha inteira para poder centralizar */
+    margin: 16px auto 0;      /* 16px de topo, auto nas laterais = centralizado, 0 de baixo */
+    padding: 10px 20px;       /* Maior que antes */
+    border-radius: 12px;      /* Levemente mais arredondado */
+    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+    width: fit-content;       /* Mantém o tamanho do botão proporcional ao texto */
+    font-size: 1.05rem;       /* Leve aumento de fonte */
+}
+
+.cert-btn-outline:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+
+
+
+
+.cert-info .platform {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.cert-info .date {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
+
+.cert-info .description {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.85;
+}
+
+/* HOVER */
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* DARK MODE */
+html.dark .cert-card {
+    color: #ffffff;
+    background: #241a31;
+    border: 1px solid #6e3fa8;
+    box-shadow: 0 0 14px rgba(178, 102, 255, 0.15);
+}
+
+html.dark .cert-card a {
+  color: #fff;
+}
+
+html.dark .cert-info .description,
+html.dark .cert-info .platform,
+html.dark .cert-info .date {
+  color: #ffffff;
+}
+
+/* LIGHT MODE - borda mais marcada */
+html:not(.dark) .cert-card {
+  border: 1px solid rgba(0,0,0,0.2);
+}
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
 
 /* ========================================= */
 /*                   HEADER                  */
@@ -177,18 +310,20 @@ p {
 .theme-btn,
 .mobile-btn {
     background: var(--card);
-    border: none;
+    border: 1px solid rgba(193, 149, 243, 0.14);
     padding: 8px 12px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: var(--shadow);
-    transition: 0.25s;
     position: absolute;
     right: 20px;
     top: 20%;
-    transform: translateY(-50%); /* 🔥 centraliza verticalmente */
-    
+    transform: translateY(-50%);
+    transition: 0.25s;
+
+    /* 🔥 sombra suave ao redor da borda */
+    box-shadow: 0 0 25px rgba(220, 125, 255, 0.5);
 }
+
 .theme-btn:hover {
     transform: translateY(-40%) scale(1.1); /* mantém o centralizado e aumenta */
 }
@@ -281,13 +416,7 @@ p {
     box-shadow: var(--shadow);
 }
 
-.section-title {<a href="linkedin-posts.html">Linkedin - Posts Profissionais</a>
-    margin-top: 45px;
-    font-size: 22px;
-    margin-bottom: 20px;
-    border-left: 5px solid var(--primary);
-    padding-left: 12px;
-}
+
 
 /* ========================================= */
 /*                CARDS GRID                 */
@@ -435,6 +564,17 @@ p {
     opacity: 0.9;
 }
 
+/* ============================== */
+/*        TÍTULO DE SEÇÃO        */
+/* ============================== */
+
+.section-title {
+    margin-top: 45px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary);
+    padding-left: 12px;
+}
 
 /* ========================================= */
 /*              PORTFÓLIO PAGE               */
@@ -466,9 +606,12 @@ p {
     background: var(--card);
     padding: 22px;
     border-radius: 16px;
-    box-shadow: var(--shadow);
-    transition: 0.25s ease;
-    border: 1px solid #00000010;
+
+    /* sombra mais forte, combinando com os cert-card */
+    box-shadow: 0 6px 18px rgba(45, 1, 53, 0.127);
+
+    border: 1px solid #2701333c;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
@@ -697,4 +840,86 @@ html.dark .project-card {
 .dark .contact-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg), var(--card-shadow-glow);
+}
+/* ============================= */
+/*        POSTS LINKEDIN         */
+/* ============================= */
+
+.linkedin-section h2 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.linkedin-section .subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grid com 2 colunas fixas */
+.linkedin-grid {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    list-style: none;
+}
+
+/* Mobile: volta para 1 coluna */
+@media (max-width: 768px) {
+    .linkedin-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card */
+.linkedin-card {
+    position: relative;
+    background: var(--card);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid #00000015;
+}
+
+.linkedin-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+}
+
+/* Imagem */
+.linkedin-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.35s ease;
+}
+
+/* Blur + escurecer no hover */
+.linkedin-card:hover img {
+    filter: blur(3px) brightness(0.6);
+}
+
+/* Overlay com texto */
+.linkedin-hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    opacity: 0;
+    transition: 0.35s ease;
+    padding: 14px;
+}
+
+/* Mostrar overlay no hover */
+.linkedin-card:hover .linkedin-hover {
+    opacity: 1;
 }

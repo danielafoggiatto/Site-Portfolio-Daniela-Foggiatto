@@ -288,39 +288,7 @@ cenarios = [
             </div>
 
 
-            <!-- CARD: Test Automation Practice Page -->
-            <div class="project-card">
-                <h3>Test Automation Practice Page</h3>
-                <p class="description">
-                    Automação completa com waits inteligentes, asserts e estrutura organizada em Selenium + Python.
-                </p>
-                <div class="tags">
-                    <span>Selenium</span>
-                    <span>Python</span>
-                    <span>QA</span>
-                </div>
-                <div class="buttons">
-                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Test-Automation-Practice-Page" target="_blank">Ver Código</a>
-                    <button class="btn-outline demo-btn" 
-    data-snippet="from selenium.webdriver.common.by import By
-import pytest
-
-@pytest.mark.iframe
-def test_CT010_iframe(driver):
-    iframe1 = driver.find_element(By.XPATH, '//*[text()=&quot;iFrame Test&quot;]')
-
-    iframe2 = driver.find_element(By.ID, 'test-iframe')
-    driver.switch_to.frame(iframe2)
-
-    link = driver.find_element(By.XPATH, 
-        '//*[text()=&quot;More information...&quot;]')
-
-    assert link.is_displayed()">
-    Demo
-</button>
-
-                </div>
-            </div>
+           
             <!-- CI com GitHub Actions — Automação -->
             <div class="project-card">
                 <h3>CI com GitHub Actions — Automação</h3>
@@ -418,6 +386,40 @@ Then(&quot;I should see product name, price and description&quot;, async () =&gt
   expect(productName).toBeTruthy();
   expect(productPrice).toBeTruthy();
 });">Demo</button>
+
+                </div>
+            </div>
+
+             <!-- CARD: Test Automation Practice Page -->
+            <div class="project-card">
+                <h3>Test Automation Practice Page</h3>
+                <p class="description">
+                    Automação completa com waits inteligentes, asserts e estrutura organizada em Selenium + Python.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>Python</span>
+                    <span>QA</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Test-Automation-Practice-Page" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" 
+    data-snippet="from selenium.webdriver.common.by import By
+import pytest
+
+@pytest.mark.iframe
+def test_CT010_iframe(driver):
+    iframe1 = driver.find_element(By.XPATH, '//*[text()=&quot;iFrame Test&quot;]')
+
+    iframe2 = driver.find_element(By.ID, 'test-iframe')
+    driver.switch_to.frame(iframe2)
+
+    link = driver.find_element(By.XPATH, 
+        '//*[text()=&quot;More information...&quot;]')
+
+    assert link.is_displayed()">
+    Demo
+</button>
 
                 </div>
             </div>
@@ -554,30 +556,7 @@ dropdown_food.select_by_value('cheese')">
                 </div>
             </div>
 
-            <!-- Testes Manuais — Tester QA -->
-            <div class="project-card">
-                <h3>Testes Manuais — Tester QA</h3>
-                <p class="description">
-                    Conjunto organizado de casos de teste manuais, cobrindo cenários funcionais, exploratórios e testes de borda, com documentação clara e reproduzível.
-                </p>
-                <div class="tags">
-                    <span>QA</span>
-                    <span>Testes Manuais</span>
-                    <span>Documentação</span>
-                </div>
-                <div class="buttons">
-                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Tester-QA" target="_blank">Ver Código</a>
-                    <button class="btn-outline demo-btn" data-snippet="Tester-QA
-Este repositório reúne casos de teste manuais organizados para diferentes cenários, com foco em qualidade, execução manual estruturada e documentação clara de critérios de aceitação. Ideal para demonstrar habilidades de QA sem automatização e para uso prático em processos de teste exploratório.
-
-🎯 Objetivo
-Documentar e organizar casos de teste manuais bem estruturados.
-Simular testes exploratórios, funcionais e de borda para validar fluxos de uso real.
-Demonstrar domínio em planejamento de teste sem depender exclusivamente de automação.
-Facilitar a reprodução de cenários por outros testadores e stakeholders.">Demo</button>
-
-                </div>
-            </div>
+            
 
             <!-- Automation Exercises -->
             <div class="project-card">
@@ -626,6 +605,31 @@ Facilitar a reprodução de cenários por outros testadores e stakeholders.">Dem
         EC.visibility_of_element_located((By.XPATH, '//b[text()=&quot;Account Created!&quot;]'))
     ).text
     assert account_msg == 'Account Created!'">Demo</button>
+
+                </div>
+            </div>
+            
+<!-- Testes Manuais — Tester QA -->
+            <div class="project-card">
+                <h3>Testes Manuais — Tester QA</h3>
+                <p class="description">
+                    Conjunto organizado de casos de teste manuais, cobrindo cenários funcionais, exploratórios e testes de borda, com documentação clara e reproduzível.
+                </p>
+                <div class="tags">
+                    <span>QA</span>
+                    <span>Testes Manuais</span>
+                    <span>Documentação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Tester-QA" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="Tester-QA
+Este repositório reúne casos de teste manuais organizados para diferentes cenários, com foco em qualidade, execução manual estruturada e documentação clara de critérios de aceitação. Ideal para demonstrar habilidades de QA sem automatização e para uso prático em processos de teste exploratório.
+
+🎯 Objetivo
+Documentar e organizar casos de teste manuais bem estruturados.
+Simular testes exploratórios, funcionais e de borda para validar fluxos de uso real.
+Demonstrar domínio em planejamento de teste sem depender exclusivamente de automação.
+Facilitar a reprodução de cenários por outros testadores e stakeholders.">Demo</button>
 
                 </div>
             </div>

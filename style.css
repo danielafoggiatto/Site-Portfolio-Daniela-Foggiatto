@@ -4,28 +4,23 @@
 :root {
     --bg: #faf7ff;
     --text: #2a2a2a;
-    --primary: #d8b4fe;
-    --primary-soft: #f1e6ff;
+    --primary: #d1bbe8;
+    --primary-soft: #d3c4e6;
     --card: #ffffff;
     --header: #ffffffcc;
     --shadow: 0 4px 14px rgba(0,0,0,0.08);
     
 }
-.developed-by {
-    text-align: center;
-    margin: 30px 0 10px 0;
-    font-style: italic;
-    color: var(--text-soft);
-}
+
 .badge-dev {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: var(--primary-soft);
-    color: var(--primary);
-    padding: 6px 12px;
+    color: var(--text);
+    padding: 6px 10px;
     border-radius: 12px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     cursor: default;
 }

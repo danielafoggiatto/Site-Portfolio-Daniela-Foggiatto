@@ -2,10 +2,10 @@
 
 Bem-vindo ao meu portfólio! Um espaço dedicado a apresentar minha jornada profissional, projetos, certificações e expertise nas áreas de **QA**, **Automação de Testes**, **Backend** e **Desenvolvimento Moderno**.
 
+Acesse o site: https://portfoliodanielafoggiatto.netlify.app/
 ---
 
 ## 
-Acesse o site: https://portfoliodanielafoggiatto.netlify.app/
 
 🎯 Sobre Este Projeto
 

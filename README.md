@@ -4,7 +4,10 @@ Bem-vindo ao meu portfólio! Um espaço dedicado a apresentar minha jornada prof
 
 ---
 
-## 🎯 Sobre Este Projeto
+## 
+Acesse o site: https://portfoliodanielafoggiatto.netlify.app/
+
+🎯 Sobre Este Projeto
 
 Este é meu **portfólio pessoal**, desenvolvido por mim mesma do zero com **HTML5**, **CSS3** e **JavaScript vanilla**, sem dependências externas. O projeto foi construído com foco em:
 

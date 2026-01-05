@@ -392,6 +392,11 @@ html:not(.dark) .cert-card {
 /* ========================================= */
 @media (max-width: 768px) {
 
+    .logo {
+        font-size: 27px;
+        padding-left: 2px;
+    }
+
     .nav {
         display: none;
         flex-direction: column;

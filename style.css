@@ -1,27 +1,24 @@
-/* ========================================= */
-/*                VARIÁVEIS                  */
-/* ========================================= */
+
 :root {
-    --bg: #faf7ff;
+    --bg: #d0c7e09b;
     --text: #2a2a2a;
     --primary: #d1bbe8;
     --primary-soft: #d3c4e6;
     --card: #ffffff;
     --header: #ffffffcc;
     --shadow: 0 4px 14px rgba(0,0,0,0.08);
-    
 }
 
 .badge-dev {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
     background: var(--primary-soft);
     color: var(--text);
     padding: 6px 10px;
     border-radius: 12px;
     font-size: 0.8rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.12);
     cursor: default;
 }
 
@@ -43,11 +40,12 @@ html.dark {
     --text: #ffffff;
     --primary: #d8b4fe;
     --primary-soft: #2d1f3b;
-    --card: #242424;
+    --card: #2a2a2a;
     --header: #000000bb;
     --shadow: 0 4px 12px rgba(0,0,0,0.4);
     --card-border: rgba(150, 90, 255, 0.4);
     --card-shadow-glow: 0 0 12px rgba(150, 90, 255, 0.25);
+    
 }
 
 /* ========================================= */
@@ -108,12 +106,6 @@ p {
     color: #6af087;
 }
 
-
-
-
-
-
-/* Card Certificação - Adaptado para Dark/Light */
 .cert-card { 
   display: flex;
   flex-direction: row;
@@ -254,8 +246,8 @@ html:not(.dark) .cert-card {
 }
 
 .profile-photo {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
@@ -314,7 +306,7 @@ html:not(.dark) .cert-card {
 .nav a:hover,
 .nav a.active {
     background: var(--primary);
-    color: white;
+    color: rgb(117, 81, 130);
     transform: scale(1.03);
 }
 
@@ -324,7 +316,7 @@ html:not(.dark) .cert-card {
 .theme-btn,
 .mobile-btn {
     background: var(--card);
-    border: 1px solid rgba(193, 149, 243, 0.14);
+    border: 1px solid rgba(182, 133, 238, 0.538);
     padding: 8px 12px;
     border-radius: 50%;
     cursor: pointer;
@@ -335,7 +327,7 @@ html:not(.dark) .cert-card {
     transition: 0.25s;
 
     /* 🔥 sombra suave ao redor da borda */
-    box-shadow: 0 0 25px rgba(220, 125, 255, 0.5);
+    box-shadow: 0 0 35px rgba(67, 29, 80, 0.828);
 }
 
 .theme-btn:hover {
@@ -456,6 +448,8 @@ html:not(.dark) .cert-card {
     transition: 0.25s ease;
     text-align: center;
 }
+
+
 
 .skill-card:hover {
     transform: translateY(-5px);
@@ -736,12 +730,15 @@ html.dark .project-card {
 
 .modal-content {
     background-color: var(--card);
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 600px;
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 16px;
+    width: 95%;
+    max-width: 1000px; /* aumenta largura máxima */
+    max-height: 85vh;  /* limita altura */
+    overflow-y: auto;  /* scroll vertical interno */
     box-shadow: var(--shadow);
+    position: relative;
 }
 
 .close {
@@ -749,15 +746,18 @@ html.dark .project-card {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
 .code-snippet {
     background: #1e1e1e;
     color: #d4d4d4;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 18px;
+    border-radius: 10px;
     overflow-x: auto;
     font-family: 'Courier New', monospace;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+
+    white-space: pre-wrap;    
+    word-break: break-word;    
 }
 
 
@@ -785,7 +785,7 @@ html.dark .project-card {
     gap: 15px;
     padding: 18px 20px;
     border-radius: 12px;
-    background: var(--card-bg);
+    background: var(--card);
     text-decoration: none;
     color: inherit;
     box-shadow: var(--shadow);
@@ -860,85 +860,56 @@ html.dark .project-card {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg), var(--card-shadow-glow);
 }
-/* ============================= */
-/*        POSTS LINKEDIN         */
-/* ============================= */
 
-.linkedin-section h2 {
-    text-align: center;
-    margin-bottom: 8px;
-}
 
-.linkedin-section .subtitle {
-    text-align: center;
-    margin-bottom: 30px;
-}
+@media (max-width: 600px) {
 
-/* Grid com 2 colunas fixas */
-.linkedin-grid {
-    display: grid;
-    gap: 22px;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0;
-    list-style: none;
-}
+    .modal-content {
+        width: 80%;
+        margin: 8% auto;
+        padding: 18px;
+        border-radius: 14px;
+    }
 
-/* Mobile: volta para 1 coluna */
-@media (max-width: 768px) {
-    .linkedin-grid {
-        grid-template-columns: 1fr;
+    .close {
+        top: 8px;
+        right: 14px;
+        font-size: 1.5rem;
+    }
+
+    .code-snippet {
+        font-size: 0.75rem;
     }
 }
+@media (max-width: 480px) {
 
-/* Card */
-.linkedin-card {
-    position: relative;
-    background: var(--card);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    border: 1px solid #00000015;
+    .contact-card {
+        flex-direction: column;
+        align-items: stretch; /* importante */
+    }
+
+    .contact-card .copy-btn {
+        margin: 1px auto 0 auto; /* centraliza horizontalmente */
+    }
+
 }
 
-.linkedin-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 22px rgba(0,0,0,0.18);
-}
+@media (max-width: 480px) {
 
-/* Imagem */
-.linkedin-card img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-    transition: 0.35s ease;
-}
+    .footer {
+        padding: 10px 5px;   /* reduz altura */
+        margin-top: 30px;     /* menos espaço acima */
+        font-size: 13px;      /* texto menor */
+        white-space: nowrap;  /* força ficar em uma linha */
+        overflow: hidden;     
+        text-overflow: ellipsis; /* coloca ... se ficar grande */
+    }
+    
+    .profile-photo {
+        display: block;
+        margin: 0 auto; /* centraliza horizontalmente */
+        width: 180px;   /* opcional: deixa menor no celular */
+        height: 180px;
+    }
 
-/* Blur + escurecer no hover */
-.linkedin-card:hover img {
-    filter: blur(3px) brightness(0.6);
-}
-
-/* Overlay com texto */
-.linkedin-hover {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    background: rgba(0, 0, 0, 0.45);
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-
-    opacity: 0;
-    transition: 0.35s ease;
-    padding: 14px;
-}
-
-/* Mostrar overlay no hover */
-.linkedin-card:hover .linkedin-hover {
-    opacity: 1;
 }

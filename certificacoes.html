@@ -29,9 +29,8 @@
             <nav id="navMenu" class="nav">
                 <a href="index.html">Sobre Mim</a>
                 <a href="experiencia.html">Experiência</a>
-                <a href="portfolio.html">Portfólio</a>
+                <a href="projetos.html">Projetos</a>
                 <a href="certificacoes.html" class="active">Certificações</a>
-                <a href="linkedin.html">Linkedin - Posts Profissionais</a>
                 <a href="contato.html">Contato</a>
             </nav>
 
@@ -44,24 +43,30 @@
         <div class="cert-controls">
             <h2 class="page-title">Certificações</h2>
             <div class="controls-row">
-                <p class="subtitle">Cursos concluídos e especializações em tecnologia, QA, automação, backend, frontend e
-                    desenvolvimento moderno.</p>
-            </div>
-        </div>
-
-        <!-- container onde os cards serão renderizados -->
-        <div id="certsContainer" class="certs-container">
+            <script>
+                (function () {
+                    const savedTheme = localStorage.getItem("theme");
+                    if (savedTheme === "dark") {
+                        document.documentElement.classList.add("dark");
+                    }
+                })();
+            </script>
             <div class="cert-grid">
-                
+               
                 <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=scSW_1WB5P8"
+                    <a href="https://www.youtube.com/watch?v=01n-WpxTAc8"
                         target="_blank">
                         <div class="cert-info">
-                            <h3>Cypress - Automação de Testes - Testes de API</h3>
-                            <p class="platform">Plataforma/Instrutor: Alex Soares</p>
-                            <p class="date">Emitido em dez de 2025</p>
+                            <h3>Linguagem C# e Programação Orientada a Objetos</h3>
+                            <p class="platform">Plataforma/Instrutor: Torne-se um Programador</p>
+                            <p class="date">Emitido em fev de 2025</p>
+
                             <p class="description">
-                                Curso focado em testes automatizados de APIs, com introdução aos conceitos fundamentais de APIs e prática desde o início. Realizei a automação de testes de API em uma aplicação demo, utilizando o ServeRest, validando requisições, respostas e comportamentos dos endpoints de forma prática e objetiva.
+                                Curso introdutório e prático de C#, abordando os pilares da
+                                Programação Orientada a Objetos: classes, objetos, herança,
+                                encapsulamento, polimorfismo e abstração.
+                                Formação focada em criar aplicações estruturadas, limpas e
+                                reutilizáveis no ecossistema .NET.
                             </p>
                             <button class="cert-btn-outline">Acessar conteúdo</button>
                         </div>
@@ -69,100 +74,20 @@
                 </li>
 
                 <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=S12sspgH8es"
+                    <a href="https://www.udemy.com/course/complete-csharp-masterclass"
                         target="_blank">
-                        <div class="cert-info">
-                            <h3>API - Playwright API Testing</h3>
-                            <p class="platform">Plataforma/Instrutor: Kaniel Outis</p>
-                            <p class="date">Emitido em dez de 2025</p>
-                            <p class="description">
-                                Curso prático de teste de API com Playwright, onde aprendi a configurar ambiente de automação, realizar requisições HTTP (GET, POST, PUT, DELETE) e validar respostas de APIs REST de forma automatizada. Explorei criação de testes confiáveis, estruturação de projeto de testes, análise de status e conteúdo de respostas e boas práticas para automação de APIs com foco em qualidade e manutenção.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
 
-                <li class="cert-card">
-                    <a href="https://app.testbeyond.com/users/sign_in"
-                        target="_blank">
                         <div class="cert-info">
-                            <h3>Playwright MCP</h3>
-                            <p class="platform">Plataforma/Instrutor: Projeto TestBeyond</p>
-                            <p class="date">Emitido em dez de 2025</p>
-                            <p class="description">
-                                Projeto TestBeyond com foco no MCP (Model Context Protocol) aplicado à automação com Playwright. Explora o uso do MCP para padronizar contextos, centralizar regras e melhorar a comunicação entre testes, APIs e fluxo de execução. O projeto demonstra como o MCP reduz acoplamento, aumenta a previsibilidade dos cenários, minimiza flakiness e eleva a maturidade da automação E2E em ambientes complexos.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
+                            <h3 class="cert-title">Complete C# Masterclass</h3>
+                            <p class="platform">Plataforma/Instrutor:  Denis Panjuta</p>
+                            <p class="date">Emitido em jan de 2025</p>
 
-               
-                <li class="cert-card">
-                    <a href="https://www.udemy.com/course/testes-cypress/learn/lecture/17034900?start=1"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Testes de aplicações modernas com Cypress</h3>
-                            <p class="platform">Plataforma/Instrutor: Udemy</p>
-                            <p class="date">Emitido em nov de 2025</p>
                             <p class="description">
-                                Testes de Aplicações Modernas com Cypress, com foco prático em automação de testes. Aprendi a criar testes funcionais, de API e frontend, trabalhar com localização de elementos, sincronismo, massa de dados, validações de APIs e virtualização de chamadas ao backend, aplicando boas práticas para testes mais rápidos, estáveis e confiáveis.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-               
-               
-               
-               
-               
-                <li class="cert-card">
-                    <a href="https://www.udemy.com/course/conceitos-devops/learn/lecture/16974162?start=0#overview"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Conceitos DevOps</h3>
-                            <p class="platform">Plataforma/Instrutor: Udemy</p>
-                            <p class="date">Emitido em nov de 2025</p>
-                            <p class="description">
-                                Curso introdutório de DevOps que apresenta, de forma clara e prática, os principais conceitos por trás da integração entre Desenvolvimento e Operações. Aborda problemas comuns como o Dependency Hell, falta de padronização entre ambientes e conflitos no fluxo de entrega. O conteúdo mostra como a cultura DevOps, aliada à automação e boas práticas, reduz gargalos, melhora a estabilidade, aumenta a escalabilidade e acelera a entrega de valor ao usuário final.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-
-                        </div>
-                    </a>
-                </li>
-
-                <li class="cert-card">
-                    <a href="https://www.udemy.com/course/free-cicd-pipeline-devops/learn/lecture/30878394?start=0#content"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>FREE CI/CD Pipeline Course</h3>
-                            <p class="platform">Plataforma/Instrutor: Udemy</p>
-                            <p class="date">Emitido em nov de 2025</p>
-                            <p class="description">
-                                Aprendi os conceitos fundamentais de Integração Contínua (CI) e Entrega Contínua (CD),
-                                explorando na prática o uso de pipelines automatizados, versionamento de código e deploy
-                                contínuo — pilares essenciais para a cultura DevOps moderna e entrega ágil de software.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.udemy.com/course/conhecendo-e-utilizando-extensoes-que-ajudam-na-rotina-de-qa/learn/lecture/51016435?start=0#content"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Conhecendo e utilizando extensões que ajudam na rotina de QA</h3>
-                            <p class="platform">Plataforma/Instrutor: Udemy</p>
-                            <p class="date">Emitido em nov de 2025</p>
-                            <p class="description">
-                                Curso focado em aprimorar a rotina de QA por meio do uso de extensões práticas que
-                                otimizam a inspeção de elementos, análise de requisições, testes de API e validações
-                                visuais. Inclui ferramentas como SelectorsHub, JSON Formatter, Postman Interceptor e
-                                Lighthouse, aplicadas a cenários reais de automação e garantia da qualidade de software.
+                                Curso completo de C# e .NET, cobrindo fundamentos até temas avançados como
+                                Programação Orientada a Objetos (OOP), Clean Code, LINQ, WPF, Generics,
+                                Unity e Testes Unitários.
+                                Focado em desenvolver aplicações robustas e bem estruturadas usando boas
+                                práticas de arquitetura e qualidade de código.
                             </p>
                             <button class="cert-btn-outline">Acessar conteúdo</button>
                         </div>
@@ -186,194 +111,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="cert-card">
-                    <a href="https://www.udemy.com/course/javascript-para-testers/"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Javascript para testers</h3>
-                            <p class="platform">Plataforma/Instrutor: Udemy</p>
-                            <p class="date">Emitido em nov de 2025</p>
-                            <p class="description">
-                                Projeto TestBeyond com foco no MCP (Model Context Protocol) aplicado à automação com Playwright. Explora o uso do MCP para padronizar contextos, centralizar regras e melhorar a comunicação entre testes, APIs e fluxo de execução. O projeto demonstra como o MCP reduz acoplamento, aumenta a previsibilidade dos cenários, minimiza flakiness e eleva a maturidade da automação E2E em ambientes complexos.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.udemy.com/course/dominando-postman-2023-testando-e-automatizado-apis/learn/lecture/44228160?start=0#content"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Dominando Postman (2025): Do Teste Manual a Performance APIs</h3>
-                            <p class="platform">Plataforma/Instrutor: Qualiters Club</p>
-                            <p class="date">Emitido em nov de 2025</p>
-                            <p class="description">
-                                Aprendi a testar APIs REST e GraphQL usando Postman, criando requisições, validando respostas e aplicando operadores lógicos. Explorei diferenças entre as arquiteturas, gerei relatórios com Newman e HTMLEXTRA e configurei pipelines no GitHub Actions para automatizar execuções e armazenar resultados. Um curso focado em prática e nos principais recursos para testes de API.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=onAFnfE_514"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Curso Básico de Playwright</h3>
-                            <p class="platform">Plataforma/Instrutor: Marcos Franco - Start QA</p>
-                            <p class="date">Emitido em out de 2025</p>
-                            <p class="description">
-                                Curso introdutório sobre automação de testes com Playwright, abordando desde a
-                                instalação e configuração do ambiente até a criação e execução de testes automatizados
-                                para aplicações web. Apresenta os principais comandos, boas práticas e exemplos práticos
-                                para quem deseja iniciar no uso da ferramenta de forma simples e eficiente.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=VihvfGx58IY"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Desafio Descomplicando GitHub Actions</h3>
-                            <p class="platform">Plataforma/Instrutor: LINUXtips</p>
-                            <p class="date">Emitido em out de 2025</p>
-                            <p class="description">
-                                Certificada em práticas de CI/CD e automação de pipelines, com foco na integração
-                                contínua, execução de testes automatizados e deploys eficientes via GitHub Actions. O
-                                certificado reforça o domínio em configuração de workflows, integração com ambientes de
-                                teste e build, e entrega contínua, garantindo qualidade e agilidade no ciclo de
-                                desenvolvimento de software.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=PHJ0tzIRAek"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Playwright + TypeScript + POM: Ultimate Guide to Test Automation</h3>
-                            <p class="platform">Plataforma/Instrutor: Matheus Beck</p>
-                            <p class="date">Emitido em out de 2025</p>
-                            <p class="description">
-                                Curso completo de automação de testes com Playwright e TypeScript, utilizando o padrão
-                                Page Object Model (POM). Ensina desde os fundamentos até a estruturação de projetos
-                                profissionais, integração com CI/CD, organização de testes end-to-end e boas práticas
-                                para criação de suítes robustas e escaláveis em ambientes reais de desenvolvimento.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=VZ5LU8vHT0s"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Playwright Python 1 | Getting Started</h3>
-                            <p class="platform">Plataforma/Instrutor: Automation Step By Step</p>
-                            <p class="date">Emitido em out de 2025</p>
-                            <p class="description">
-                                Curso prático voltado para automação de testes com Playwright usando Python. Aborda
-                                instalação e configuração do ambiente, conceitos básicos da API Playwright, criação e
-                                execução de testes end-to-end, localização de elementos, esperas implícitas/explicitas,
-                                asserts com expect e boas práticas iniciais para organizar suítes de teste.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=sfMuzYibJTM"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Cypress - Automação de Testes</h3>
-                            <p class="platform">Plataforma/Instrutor: Alex Soares</p>
-                            <p class="date">Emitido em set de 2025</p>
-                            <p class="description">
-                                Curso Cypress - Automação de Testes, ministrado por Alex Soares. Aborda desde os
-                                conceitos básicos até a criação de testes automatizados completos com Cypress, incluindo
-                                testes E2E, boas práticas, comandos personalizados, integração com CI/CD e geração de
-                                relatórios. Focado em preparar o aluno para aplicar automação moderna e eficiente em
-                                projetos reais.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.udemy.com/course/automacao-de-testes-selenium-webdriver-python/learn/lecture/39072852?start=0#content"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Automação de Testes Web com Selenium Webdriver e Python</h3>
-                            <p class="platform">Plataforma/Instrutor: Leonardo Carvalho</p>
-                            <p class="date">Emitido em ago de 2025</p>
-                            <p class="description">
-                                Curso Automação de Testes Web com Selenium WebDriver e Python, ministrado por Leonardo
-                                Carvalho. Ensina desde os fundamentos até a criação de testes automatizados robustos,
-                                cobrindo localização de elementos, waits, boas práticas, Page Objects e integração com
-                                Pytest. Ideal para quem deseja dominar automação de testes web em Python de forma
-                                prática e profissional.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.udemy.com/course/teste-de-software-manual-do-planejamento-a-execucao/learn/lecture/39172130?start=0#content"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Teste de Software Manual: Do Planejamento à Execução</h3>
-                            <p class="platform">Plataforma/Instrutor: Qualiters Club</p>
-                            <p class="date">Emitido em ago de 2025</p>
-                            <p class="description">
-                                Curso Teste de Software Manual: Do Planejamento à Execução da Qualiters Club, abordando
-                                todas as etapas do processo de teste — análise de requisitos, planejamento, design de
-                                casos de teste, execução e reporte de bugs. Focado em práticas reais de QA, garante uma
-                                base sólida para quem deseja atuar com qualidade de software e testes manuais.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=siJW7B_ySd4"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Teste de Software: Fundamentos e Prática 🔧
-                                <br> Do Zero ao Profissional
-                            </h3>
-                            <p class="platform">Plataforma/Instrutor: Codi Academy</p>
-                            <p class="date">Emitido em jul de 2025</p>
-                            <p class="description">
-                                Curso Completo de Teste de Software: Fundamentos e Prática da Codi Academy, cobrindo
-                                desde os conceitos básicos até a aplicação prática de testes manuais e automatizados.
-                                Inclui tipos de teste, ciclo de vida, planejamento, execução e análise de resultados,
-                                preparando o aluno para atuar com qualidade de software em ambientes reais.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=dc3DBWgt8gw"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Curso de Testes de Software para Iniciantes - CTFL</h3>
-                            <p class="platform">Plataforma/Instrutor: Mauro Henrique Lima de Boni</p>
-                            <p class="date">Emitido em jun de 2025</p>
-                            <p class="description">
-                                Curso de <strong>Testes de Software para Iniciantes (CTFL)</strong> com o professor
-                                <em>Mauro de Boni</em>, abordando os fundamentos da <strong>qualidade de
-                                    software</strong>, tipos e níveis de teste, <strong>ciclo de vida de
-                                    desenvolvimento</strong>, técnicas de teste e <strong>conceitos essenciais para
-                                    certificação ISTQB/CTFL</strong>, com foco em boas práticas e visão analítica do
-                                processo de testes.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
+                
                 <li class="cert-card">
                     <a href="https://www.youtube.com/watch?v=sTX0UEplF54"
                         target="_blank">
@@ -460,46 +198,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=01n-WpxTAc8"
-                        target="_blank">
-                        <div class="cert-info">
-                            <h3>Linguagem C# e Programação Orientada a Objetos</h3>
-                            <p class="platform">Plataforma/Instrutor: Torne-se um Programador</p>
-                            <p class="date">Emitido em fev de 2025</p>
-
-                            <p class="description">
-                                Curso introdutório e prático de C#, abordando os pilares da
-                                Programação Orientada a Objetos: classes, objetos, herança,
-                                encapsulamento, polimorfismo e abstração.
-                                Formação focada em criar aplicações estruturadas, limpas e
-                                reutilizáveis no ecossistema .NET.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-                    </a>
-                </li>
-                <li class="cert-card">
-                    <a href="https://www.udemy.com/course/complete-csharp-masterclass"
-                        target="_blank">
-
-                        <div class="cert-info">
-                            <h3 class="cert-title">Complete C# Masterclass</h3>
-                            <p class="platform">Plataforma/Instrutor:  Denis Panjuta</p>
-                            <p class="date">Emitido em jan de 2025</p>
-
-                            <p class="description">
-                                Curso completo de C# e .NET, cobrindo fundamentos até temas avançados como
-                                Programação Orientada a Objetos (OOP), Clean Code, LINQ, WPF, Generics,
-                                Unity e Testes Unitários.
-                                Focado em desenvolver aplicações robustas e bem estruturadas usando boas
-                                práticas de arquitetura e qualidade de código.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-
-                    </a>
-                </li>
+  
                 <li class="cert-card">
                     <a href="https://www.youtube.com/watch?v=8mei6uVttho"
                         target="_blank">
@@ -563,12 +262,10 @@
                 <li class="cert-card">
                     <a href="https://www.youtube.com/watch?v=P7t13SGytRk"
                         target="_blank">
-
                         <div class="cert-info">
                             <h3 class="cert-title">Build a Netflix Landing Page Clone with HTML, CSS & JS</h3>
                             <p class="platform">Plataforma/Instrutor: Traversy Media</p>
                             <p class="date">Emitido em nov de 2024</p>
-
                             <p class="description">
                                 Curso prático de front-end focado na criação de um clone da landing page da Netflix
                                 utilizando HTML, CSS e JavaScript. Aborda estruturação profissional, responsividade,
@@ -583,12 +280,10 @@
                 <li class="cert-card">
                     <a href="https://www.youtube.com/watch?v=uKgn-To1C4Q"
                         target="_blank">
-
                         <div class="cert-info">
                             <h3 class="cert-title">Microsoft Homepage Clone - CSS Grid, Flex & Media Queries</h3>
                             <p class="platform">Plataforma/Instrutor: Traversy Media</p>
                             <p class="date">Emitido em nov de 2024</p>
-
                             <p class="description">
                                 Curso focado em recriar a homepage da Microsoft utilizando CSS Grid, Flexbox e
                                 Media Queries. Aborda layout responsivo, técnicas modernas de alinhamento e
@@ -597,18 +292,16 @@
                             </p>
                             <button class="cert-btn-outline">Acessar conteúdo</button>
                         </div>
-
                     </a>
                 </li>
+
                 <li class="cert-card">
                     <a href="https://www.youtube.com/watch?v=0xMQfnTU6oo"
                         target="_blank">
-
                         <div class="cert-info">
                             <h3 class="cert-title">CSS Grid, Flexbox & Media Queries Crash Course</h3>
                             <p class="platform">Plataforma/Instrutor: Traversy Media</p>
                             <p class="date">Emitido em set de 2024</p>
-
                             <p class="description">
                                 Curso prático sobre as principais técnicas modernas de layout responsivo com CSS.
                                 Flexbox: alinhamento flexível, distribuição de espaço e organização de elementos;
@@ -618,30 +311,8 @@
                             </p>
                             <button class="cert-btn-outline">Acessar conteúdo</button>
                         </div>
-
                     </a>
                 </li>
-                <li class="cert-card">
-                    <a href="https://www.youtube.com/watch?v=yfoY53QXEnI"
-                        target="_blank">
-
-                        <div class="cert-info">
-                            <h3 class="cert-title">CSS Crash Course For Absolute Beginners</h3>
-                            <p class="platform">Plataforma/Instrutor: Traversy Media</p>
-                            <p class="date">Emitido em ago de 2024</p>
-
-                            <p class="description">
-                                Curso introdutório que ensina, de forma prática e objetiva, os principais fundamentos do
-                                CSS3, incluindo seletores, propriedades essenciais, Box Model, cores, fontes,
-                                organização de estilos e estruturação básica de páginas web.
-                                Ministrado por Brad Traversy, referência internacional em desenvolvimento front-end.
-                            </p>
-                            <button class="cert-btn-outline">Acessar conteúdo</button>
-                        </div>
-
-                    </a>
-                </li>
-
 
                 <li class="cert-card">
                     <a href="https://www.youtube.com/watch?v=Ejkb_YpuHWs"
@@ -665,7 +336,7 @@
                     <a href="https://www.youtube.com/watch?v=UB1O30fR-EE"
                         target="_blank">
                         <div class="cert-info">
-                            <h3>HTML Crash Course For Absolute Beginners</h3>
+                            <h3>HTML Crash Course For Absolute Beginners & CSS Crash Course For Absolute Beginners</h3>
                             <p class="platform">Plataforma/Instrutor: Traversy Media</p>
                             <p class="date">Emitido em jul de 2024</p>
                             <p class="description">
@@ -680,9 +351,55 @@
                         </div>
                     </a>
                 </li>
-
-
-
+                    
+                <li class="cert-card">
+                    <a href="https://www.udemy.com/course/dominando-postman-2023-testando-e-automatizado-apis/learn/lecture/44228160?start=0#content"
+                        target="_blank">
+                        <div class="cert-info">
+                            <h3>Dominando Postman (2025): Do Teste Manual a Performance APIs</h3>
+                            <p class="platform">Plataforma/Instrutor: Qualiters Club</p>
+                            <p class="date">Emitido em nov de 2025</p>
+                            <p class="description">
+                                Aprendi a testar APIs REST e GraphQL usando Postman, criando requisições, validando respostas e aplicando operadores lógicos. Explorei diferenças entre as arquiteturas, gerei relatórios com Newman e HTMLEXTRA e configurei pipelines no GitHub Actions para automatizar execuções e armazenar resultados. Um curso focado em prática e nos principais recursos para testes de API.
+                            </p>
+                            <button class="cert-btn-outline">Acessar conteúdo</button>
+                        </div>
+                    </a>
+                </li>
+               
+                <li class="cert-card">
+                    <a href="https://www.udemy.com/course/automacao-de-testes-selenium-webdriver-python/learn/lecture/39072852?start=0#content"
+                        target="_blank">
+                        <div class="cert-info">
+                            <h3>Automação de Testes Web com Selenium Webdriver e Python</h3>
+                            <p class="platform">Plataforma/Instrutor: Leonardo Carvalho</p>
+                            <p class="date">Emitido em ago de 2025</p>
+                            <p class="description">
+                                Curso Automação de Testes Web com Selenium WebDriver e Python, ministrado por Leonardo
+                                Carvalho. Ensina desde os fundamentos até a criação de testes automatizados robustos,
+                                cobrindo localização de elementos, waits, boas práticas, Page Objects e integração com
+                                Pytest. Ideal para quem deseja dominar automação de testes web em Python de forma
+                                prática e profissional.
+                            </p>
+                            <button class="cert-btn-outline">Acessar conteúdo</button>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="cert-card">
+                    <a href="https://www.youtube.com/watch?v=VqVQ7vHY32o"
+                        target="_blank">
+                        <div class="cert-info">
+                            <h3>Curso de Testes de API Rest</h3>
+                            <p class="platform">Plataforma/Instrutor: Julio de Lima</p>
+                            <p class="date">Emitido em jan de 2026</p>
+                            <p class="description">
+                                Curso focado em testes automatizados de APIs, com introdução aos conceitos fundamentais de APIs e prática desde o início. Realizei a automação de testes de API em uma aplicação demo, utilizando o ServeRest, validando requisições, respostas e comportamentos dos endpoints de forma prática e objetiva.
+                            </p>
+                            <button class="cert-btn-outline">Acessar conteúdo</button>
+                        </div>
+                    </a>
+                </li>
             </div>
 
         </div>
@@ -699,7 +416,7 @@
     </div>
 
     <footer class="footer">
-        © 2025 - Daniela Foggiatto • Portfólio desenvolvido por mim
+        © 2026 - Daniela Foggiatto • Todos os direitos reservados
     </footer>
 </body>
 

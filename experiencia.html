@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 <head>
     <script>
-        // Aplica o tema antes do CSS carregar (previne o "flash")
         (function () {
             const savedTheme = localStorage.getItem("theme");
             if (savedTheme === "dark") {
@@ -31,9 +30,8 @@
         <nav id="navMenu" class="nav">
             <a href="index.html">Sobre Mim</a>
             <a href="experiencia.html" class="active">Experiência</a>
-            <a href="portfolio.html">Portfólio</a>
+            <a href="projetos.html">Projetos</a>
             <a href="certificacoes.html" >Certificações</a>
-            <a href="linkedin.html">Linkedin - Posts Profissionais</a>
             <a href="contato.html">Contato</a>
         </nav>
 
@@ -45,167 +43,78 @@
 <main class="container page-section">
 
     <h2 class="page-title">Minha Experiência</h2>
-    <p class="page-subtitle">Um resumo claro e elegante da minha trajetória profissional na área de QA e tecnologia.</p>
+    <p class="page-subtitle">
+        Resumo da minha trajetória em desenvolvimento back-end com C#, APIs REST e qualidade de software.
+    </p>
 
-    <!-- TIMELINE -->
     <section class="timeline">
 
+        <!-- Experiência Profissional -->
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-                <h3>QA Test Automation — Nec Plus Ultra</h3>
-                <span class="timeline-date">Setembro/2025 • Atual</span>
-
+                <h3>Junior Software Engineer — Nexus Labz Ltda.</h3>
+                <span class="timeline-date">Fev/2026 – Atual</span>
                 <p>
-                    Experiência com automação de testes, garantindo a qualidade das entregas em diferentes projetos.
+                    Desenvolvimento de funcionalidades back-end com C#, aplicando OOP, arquitetura em camadas e boas práticas de Clean Code. 
+                    Integração com APIs REST e manipulação de dados via SQL, garantindo funcionalidades robustas e escaláveis.
                 </p>
-
                 <ul>
-                    <li>Automação com Playwright (TS, JS, Python)</li>
-                    <li>Testes funcionais, regressão, integração e E2E</li>
-                    <li>Pytest, Selenium, Cypress, BDD</li>
-                    <li>Integração com pipelines CI/CD</li>
-                    <li>Validação ponta a ponta de funcionalidades sensíveis</li>
-                    <li>Validação ponta a ponta de funcionalidades sensíveis</li>
-                    <li>Uso de waits inteligentes e técnicas para reduzir flakiness</li>
-                    <li>
-                        Implementação de automações escaláveis utilizando Page Object Model (POM), arquitetura em camadas, 
-                        princípios de Clean Code e criação de helpers/utils para reduzir duplicidade — garantindo testes 
-                        organizados, reutilizáveis, fáceis de manter e com código continuamente refatorado.
-                    </li>
-
+                    <li>Implementação e consumo de APIs REST</li>
+                    <li>Criação e manutenção de regras de negócio</li>
+                    <li>Integração com front-end (React/React Native) e validação de dados</li>
+                    <li>Escrita de testes unitários e de integração para garantir estabilidade</li>
+                    <li>Participação em code reviews e aplicação de padrões de Clean Code</li>
+                    <li>Colaboração em ambiente ágil (Scrum/Kanban)</li>
                 </ul>
             </div>
         </div>
 
+        <!-- Experiência em QA / Automação -->
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-                <h3>Projetos Acadêmicos e Estudos</h3>
-                <span class="timeline-date">Julho/2024 • Atual</span>
-                <ul class="studies-list">
-
-                    <li>
-                        <strong>🤖 Automação com Playwright + TypeScript</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>Configuração de ambiente e execução de testes</li>
-                            <li>Selectors, Page Objects e BDD com Cucumber</li>
-                            <li>Execução local e em pipeline CI/CD</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>⚙️ Git, GitHub e Pipelines</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>Comandos essenciais, branches e merge</li>
-                            <li>Pull Requests e GitHub Actions (básico)</li>
-                            <li>Pipeline, CI/CD, deploy vs staging vs produção</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>📘 Page Objects para testes automatizados</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>Framework em Page Object Model</li>
-                            <li>Cobertura de login, inventário, carrinho e fluxo de compra</li>
-                            <li>Boas práticas de manutenção de testes</li>
-                        </ul>
-    
-                    </li>
-                    <li>
-                        <strong>📘 Automação com Cypress + JavaScript</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>Automação de fluxos de teste em aplicações web</li>
-                            <li>Uso de comandos Cypress, assertions e waits</li>
-                            <li>Estruturação de testes e organização de pastas</li>
-                            <li>Execução de testes local e em pipeline</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>📘 Exercícios de Automação — Selenium + Python</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>XPath, selectors e asserts</li>
-                            <li>Técnicas de automação prática</li>
-                            <li>Testes exploratórios em páginas de prática</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>📘 Automação com Selenium + Python</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>Automação de cenários completos com waits, asserts e validações</li>
-                            <li>Estrutura de testes organizada</li>
-                            <li>Interações com elementos complexos</li>
-                        </ul>
-
-
-                    </li>
-                    <li>
-                        <strong>🧪 Testes Manuais</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>Casos de teste e cenários BDD</li>
-                            <li>Massa de dados e evidências</li>
-                            <li>Testes exploratórios e identificação de riscos</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>📘 C# – Sistema em Camadas</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>Lógica de programação e OOP (classes, herança, encapsulamento, polimorfismo)</li>
-                            <li>CRUD de pacientes, médicos e agendamentos</li>
-                            <li>Estrutura em camadas (Domain, Data, Service, UI)</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>📘 C# – Console e OOP</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>Gerenciamento de biblioteca (livros e usuários)</li>
-                            <li>Encapsulamento, polimorfismo e tratamento de exceções</li>
-                            <li>Serialização JSON</li>
-                        </ul>
-                    </li>
-
-                     <li>
-                        <strong>🌐 JavaScript + Frontend</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>Manipulação de elementos com JavaScript</li>
-                            <li>Validação de formulários e interações básicas</li>
-                            <li>Layouts e responsividade com HTML e CSS</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>🌐 HTML, CSS e JS</strong><br>
-                        <strong>O que foi aprendido:</strong>
-                        <ul>
-                            <li>Estrutura e semântica HTML</li>
-                            <li>Estilização com CSS (layouts, variáveis, responsividade)</li>
-                            <li>Funcionalidades básicas em JS</li>
-                            <li>Criação de galeria e carrosséis</li>
-                        </ul>
-                    </li>
-
-                   
-
-
-
-
+                <h3>Quality Assurance (QA) — Nec Plus Ultra</h3>
+                <span class="timeline-date">Set/2025 – Jan/2026</span>
+                <p>
+                    Testes manuais e automatizados em aplicações web (SPA) e APIs REST, aumentando a cobertura de testes e garantindo entregas confiáveis.
+                </p>
+                <ul>
+                    <li>Automação com Playwright, Cypress e Selenium (TS, JS, Python)</li>
+                    <li>Testes funcionais, regressão, integração e E2E</li>
+                    <li>Validação de APIs com Postman, análise de payloads e status codes</li>
+                    <li>Integração de testes em pipelines CI/CD</li>
+                    <li>Aplicação de BDD/Gherkin para critérios de aceite e documentação de testes</li>
                 </ul>
+            </div>
+        </div>
 
-
+        <!-- Projetos Acadêmicos / Autorais -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Projetos Práticos e Autorais</h3>
+                <span class="timeline-date">Jul/2024 – Dez/2025</span>
+                <p>
+                    Desenvolvimento de sistemas e aplicações web com foco em back-end C#, arquitetura em camadas e boas práticas de código.
+                </p>
+                <ul class="studies-list">
+                    <li>
+                        <strong>Sistema de Biblioteca (Console)</strong> – Gerenciamento de leitores, livros, empréstimos e geração de métricas.
+                    </li>
+                    <li>
+                        <strong>Sistema de Agendamento para Clínica Médica</strong> – Modelagem de entidades, regras de negócio e verificação de conflitos de horário.
+                    </li>
+                    <li>
+                        <strong>Agenda de Compromissos Modular</strong> – Persistência em arquivo, testes e estrutura modular organizada.
+                    </li>
+                    <li>
+                        <strong>E-commerce Autoral (Frontend + Backend)</strong> – HTML, CSS, JS, consumo de APIs, carrinho, login, busca dinâmica e organização baseada em Clean Code.
+                    </li>
+                    <li>
+                        <strong>Testes e Qualidade</strong> – Funcionais e exploratórios end-to-end, validação de fluxos, regras de negócio e consistência de dados.
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -217,53 +126,34 @@
     <div class="experience-cards">
 
         <div class="exp-card">
-            <div class="exp-icon">🧪</div>
-            <h3>Automação de Testes</h3>
-            <p>Criação de suítes de testes completas, cenários avançados e pipelines estruturadas.</p>
+            <div class="exp-icon">💻</div>
+            <h3>Backend & APIs</h3>
+            <p>Desenvolvimento de APIs REST com C#, aplicação de lógica avançada, integração com front-end e manipulação de dados em SQL.</p>
+        </div>
+
+        <div class="exp-card">
+            <div class="exp-icon">🧠</div>
+            <h3>Lógica & Arquitetura</h3>
+            <p>Estruturas de dados, OOP, arquitetura em camadas, Clean Code e organização de código escalável e de fácil manutenção.</p>
         </div>
 
         <div class="exp-card">
             <div class="exp-icon">⚙️</div>
             <h3>CI/CD & Git</h3>
-            <p>Integração contínua, versionamento, branches e revisão de código.</p>
+            <p>Versionamento de código, pipelines de integração contínua e deploy de aplicações com foco em entregas rápidas e seguras.</p>
         </div>
-        <div class="exp-card">
-            <div class="exp-icon">🕵️‍♀️</div>
-            <h3>Análise Técnica & Debug</h3>
-            <p>Identificação e investigação de bugs, leitura de logs, reprodução de cenários críticos e análise de root cause.</p>
-        </div>
-        <div class="exp-card">
-            <div class="exp-icon">📋</div>
-            <h3>Controle de Qualidade & Processos</h3>
-            <p>Aplicação de testes funcionais, regressão, smoke, integração e E2E, seguindo boas práticas de QA.</p>
-        </div>
-        <div class="exp-card">
-            <div class="exp-icon">📊</div>
-            <h3>Observabilidade & Logs</h3>
-            <p>Monitoramento de eventos, análise de logs e rastreamento de erros para diagnóstico rápido e preciso.</p>
-        </div>
-        <div class="exp-card">
-            <div class="exp-icon">📊</div>
-            <h3>Observabilidade & Logs</h3>
-            <p>Monitoramento de eventos, análise de logs e rastreamento de erros para diagnóstico rápido e preciso.</p>
-        </div>
-        <div class="exp-card">
-            <div class="exp-icon">🎨</div>
-            <h3>Frontend & UI Testing</h3>
-            <p>Testes e validações em interfaces web, DOM, componentes, comportamento visual e fluxos completos no navegador.</p>
-        </div>
-        <div class="exp-card">
-            <div class="exp-icon">💻</div>
-            <h3>Backend & APIs</h3>
-            <p>Desenvolvimento e testes de APIs REST, lógica avançada e SQL.</p>
-        </div>
+
         <div class="exp-card">
             <div class="exp-icon">🗄️</div>
-            <h3>Banco de Dados & SQL</h3>
-            <p>Criação de consultas, validação de dados, apoio à automação e testes com SQL para garantir consistência do sistema.</p>
+            <h3>Bancos de Dados & SQL</h3>
+            <p>Consultas, modelagem e validação de dados, suporte a backend e testes automatizados, garantindo consistência e performance do sistema.</p>
         </div>
 
-
+        <div class="exp-card">
+            <div class="exp-icon">🧪</div>
+            <h3>Testes & Qualidade</h3>
+            <p>Testes unitários, integração e E2E em APIs e backend, garantindo estabilidade, confiabilidade e prevenção de falhas.</p>
+        </div>
 
     </div>
 
@@ -273,7 +163,7 @@
         <br>por Daniela Foggiatto
     </div>
     <footer class="footer">
-        © 2025 - Daniela Foggiatto • Portfólio desenvolvido por mim
+        © 2026 - Daniela Foggiatto • Todos os direitos reservados
     </footer>
 
 </body>

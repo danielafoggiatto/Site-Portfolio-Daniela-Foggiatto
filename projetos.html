@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetos • Daniela Foggiatto</title>
+
+    <!-- Fonte delicada -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Daniela Foggiatto</h1>
+
+            <nav id="navMenu" class="nav">
+                <a href="index.html">Sobre Mim</a>
+                <a href="experiencia.html">Experiência</a>
+                <a href="projetos.html" class="active">Projetos</a>
+                <a href="certificacoes.html" >Certificações</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <button id="themeToggle" class="theme-btn">🌙</button>
+            <button id="mobileBtn" class="mobile-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container page-section">
+
+        <h2 class="page-title">Projetos</h2>
+        <p class="subtitle">Desenvolvimento backend com C#, APIs REST, arquitetura limpa, integração com banco de dados, desenvolvimento web e testes automatizados.</p>
+        <div class="projects-grid">
+            <!-- Clínica Médica — C# -->
+            <div class="project-card">
+                <h3>Clínica Médica — C#</h3>
+                <p class="description">
+                    Sistema em camadas com cadastro de médicos, pacientes e agendamentos. Une Entity Framework, SQL, OOP e Clean Code para uma aplicação robusta e escalável.
+                </p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>OOP</span>
+                    <span>Camadas</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Sitema-de-Agendamento---Clinica-Medica" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="using ClinicaMedica.Data;
+using ClinicaMedica.Domain;
+using ClinicaMedica.Services;
+using Microsoft.EntityFrameworkCore;
+
+var context = new ClinicaContext();
+context.Database.EnsureCreated();
+
+var consultaService = new ConsultaService(context);
+
+bool continuar = true;
+
+while (continuar)
+{
+    Console.WriteLine(&quot;\n--- MENU CLÍNICA ---&quot;);
+    Console.WriteLine(&quot;1. Cadastrar Paciente&quot;);
+    Console.WriteLine(&quot;2. Cadastrar Médico&quot;);
+    Console.WriteLine(&quot;3. Agendar Consulta&quot;);
+    Console.WriteLine(&quot;4. Listar Consultas&quot;);
+    Console.WriteLine(&quot;5. Sair&quot;);
+    Console.Write(&quot;Escolha: &quot;);
+    var opcao = Console.ReadLine();
+
+    switch (opcao)
+    {
+        case &quot;1&quot;:
+            Console.Write(&quot;Nome: &quot;);
+            var nomeP = Console.ReadLine();
+            Console.Write(&quot;CPF: &quot;);
+            var cpf = Console.ReadLine();
+            Console.Write(&quot;Data de nascimento (yyyy-mm-dd): &quot;);
+            var nasc = DateTime.Parse(Console.ReadLine());
+            Console.Write(&quot;Telefone: &quot;);
+            var tel = Console.ReadLine();
+
+            var paciente = new Paciente { Nome = nomeP, CPF = cpf, DataNascimento = nasc, NumTelefone = tel };
+            context.Pacientes.Add(paciente);
+            context.SaveChanges();
+            Console.WriteLine(&quot;Paciente cadastrado.&quot;);
+            break;
+    }
+}">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Biblioteca Console — C# -->
+            <div class="project-card">
+                <h3>Biblioteca Console — C#</h3>
+                <p class="description">
+                    Sistema com OOP, encapsulamento, polimorfismo e controle de usuários/livros, com sistema de empréstimos e métricas.
+                </p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>OOP</span>
+                    <span>Console</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Biblioteca_Console" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="public static void MenuDeLeitores()
+{
+    CadastroLeitor cadastroLeitor = new CadastroLeitor();
+
+    bool emMenu = true;
+
+    while (emMenu)
+    {
+        Console.WriteLine(&quot;=== Leitor ===&quot;);
+        Console.WriteLine(&quot;1. Cadastrar&quot;);
+        Console.WriteLine(&quot;2. Editar&quot;);
+        Console.WriteLine(&quot;3. Remover&quot;);
+        Console.WriteLine(&quot;4. Buscar por Nome&quot;);
+        Console.WriteLine(&quot;5. Buscar por Matrícula&quot;);
+        Console.WriteLine(&quot;6. Listar Leitores&quot;);
+        Console.WriteLine(&quot;7 Voltar&quot;);
+
+        int opcao = Program.LerInteiro(&quot;Digite a opção: &quot;);
+
+        switch (opcao)
+        {
+            case 1:
+                cadastroLeitor.AddLeitor();
+                break;
+
+            case 2:
+                int matricula = Program.LerInteiro(&quot;Digite a matrícula do leitor: &quot;);
+
+                Console.Write(&quot;Digite o novo nome do leitor: &quot;);
+                string novoNome = Console.ReadLine();
+
+                bool editado = Leitor.EditarLeitor(matricula, novoNome);
+
+                if (editado)
+                {
+                    Leitor.SalvarEmArquivo();
+                    Console.WriteLine(&quot;Leitor editado com sucesso!&quot;);
+                }
+                else
+                {
+                    Console.WriteLine(&quot;Leitor não encontrado.&quot;);
+                }
+
+                break;
+        }
+    }
+}">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Sistema de Agenda — C# -->
+            <div class="project-card">
+                <h3>Sistema de Agenda — C#</h3>
+                <p class="description">
+                    Agenda de compromissos com JSON, exceções e arquitetura limpa em C#. 
+                    Utiliza banco de dados em arquivo, manipulação de datas e organização modular para fácil manutenção e escalabilidade.
+                </p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>JSON</span>
+                    <span>OOP</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Agenda_de_Compromissos" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="namespace Agenda_de_Compromissos
+{
+    public class Compromisso
+    {
+        public int Id { get; set; }
+        public string Titulo { get; set; }
+        public DateTime Data { get; set; }
+        public string Local { get; set; }
+        public string Descricao { get; set; }
+
+        public Compromisso(int id, string titulo, DateTime data, string local, string descricao)
+        {
+            Id = id;
+            Titulo = titulo;
+            Data = data;
+            Local = local;
+            Descricao = descricao;
+        }
+
+        public override string ToString()
+        {
+            return $"{Id}: {Titulo} | {Data:dd/MM/yyyy HH:mm} | {Local} | {Descricao}";
+        }
+
+        public string Serializar()
+        {
+            return $"{Id}; {Titulo}; {Data:o}; {Local}; {Descricao}";
+        }
+    }
+}">Demo</button>
+
+                </div>
+            </div>
+
+    
+            <!-- Candlelight — E-commerce -->
+            <div class="project-card">
+                <h3>Candlelight — E-commerce</h3>
+                <p class="description">
+                    E-commerce moderno combinando Html, Css e JavaScript.
+                    Em breve será implementado backend em C# para integração com banco de dados e APIs REST.
+                </p>
+                <div class="tags">
+                    <span>Html</span>
+                    <span>Css</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Candlelight" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>Detalhes do Produto</title>
+
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
+  <link rel='stylesheet' href='../assets/css/style.css' /> 
+</head>
+
+<body>
+    <header>
+        <div id='navbar'></div>
+    </header>
+    <div id='conteudo'></div>
+
+  <div id='detalhe-produto'></div>
+  <div id='carrosel-inicio'></div>
+ 
+  <footer class='bg-success text-white py-4 mt-5'>
+        <div class='container'>
+            <div class='row text-center text-md-start'>
+            
+            <div class='col-md-4 mb-3'>
+                <h5>Candle Light</h5>
+                <p>Velas artesanais feitas com carinho e propósito.</p>
+            </div>">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Clone Netflix -->
+            <div class="project-card">
+                <h3>Clone Netflix</h3>
+                <p class="description">
+                    Layout responsivo com carrossel e efeitos modernos.
+                </p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Netflix" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="const tabItems = document.querySelectorAll('.tab-item');
+const tabContentItems = document.querySelectorAll('.tab-content-item');
+
+//Select tab content item
+function selectItem(e) {
+    removeBorder();
+    removeShow();
+    //Add border to current tab
+    this.classList.add('tab-border');
+    //Grab content item from DOM
+    const tabContentItem = document.querySelector(`#${this.id}-content`);
+    //Add show class
+    tabContentItem.classList.add('show');
+}
+
+function removeBorder() {
+    tabItems.forEach(item => item.classList.remove('tab-border'));
+}
+
+function removeShow() {
+    tabContentItems.forEach(item => item.classList.remove('show'));
+}
+
+//Listen for tab click
+tabItems.forEach(item => item.addEventListener('click', selectItem));">Demo</button>
+
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Sophia Photography</h3>
+                <p class="description">
+                    Site autoral com jQuery, Bootstrap e galeria responsiva.
+                </p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Sophia-Photography--Projeto-Autoral/" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="function carregarConteudo(pagina) {
+var conteudo = document.getElementById('conteudo');
+
+switch (pagina) {
+case 'home':
+{
+    fetch('home.html')
+        .then(response => response.text())  
+        .then(data => {
+            conteudo.innerHTML = data;  
+        })
+        .catch(error => {
+            console.error('Erro ao carregar o conteúdo:', error);
+        });    
+}            
+break;
+
+case 'services':
+{
+    fetch('services.html')
+        .then(response => response.text())  
+        .then(data => {
+            conteudo.innerHTML = data;  
+        })
+        .catch(error => {
+            console.error('Erro ao carregar o conteúdo:', error);
+        });      
+}
+break;">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- CARD: Selenium UI -->
+            <div class="project-card">
+                <h3>Testes com Selenium e Pytest</h3>
+                <p class="description">
+                    Automação de testes de interface com Selenium, explorando diferentes técnicas de localização de elementos e interações UI.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>Python</span>
+                    <span>UI Testing</span>
+                    <span>Automação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/testes-de-interface-selenium" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" 
+    data-snippet="def test_ct005_receitas_hamburguinho_check_uncheck(page):
+    # Lista dos IDs dos switches
+    switches = [
+        'sample-preset-income-totalReceived-switch',
+        'sample-preset-income-totalToReceive-switch',
+        'sample-preset-income-totalCommittedIncome-switch',
+        'sample-preset-expense-totalPaid-switch',
+        'sample-preset-expense-totalToPay-switch',
+        'sample-preset-expense-totalExpenses-switch',
+    ]
+    # Pega o botão menu apenas do primeiro card (Receitas)
+    page.locator('#main-cards-menu-btn').click()
+    for switch_id in switches:
+        switch = page.locator(f'#{switch_id}')
+        switch.wait_for(state='visible', timeout=5000)
+
+        # Estado inicial (true ou false)
+        estado_inicial = switch.get_attribute('aria-checked')
+        print(f'🔎 {switch_id} antes do clique: {estado_inicial}')
+
+        # Clica e valida mudança
+        switch.click()
+        if estado_inicial == 'true':
+            expect(switch).to_have_attribute('aria-checked', 'false')
+            print(f'✅ {switch_id} foi desmarcado')
+        else:
+            expect(switch).to_have_attribute('aria-checked', 'true')
+            print(f'✅ {switch_id} foi marcado')
+
+        # (opcional) volta ao estado original
+        switch.click()
+        expect(switch).to_have_attribute('aria-checked', estado_inicial)">
+    Demo
+</button>
+
+                </div>
+            </div>
+
+            <!-- MODAL ÚNICO -->
+            <div id="codeModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <pre class="code-snippet"><code id="modalCode"></code></pre>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <div class="badge-dev">
+        Projetado, desenvolvido e testado  
+        <br>por Daniela Foggiatto
+    </div>
+    <footer class="footer">
+        © 2026 - Daniela Foggiatto • Todos os direitos reservados
+    </footer>
+</body>
+</html>

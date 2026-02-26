@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio • Daniela Foggiatto</title>
+
+    <!-- Fonte delicada -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Daniela Foggiatto</h1>
+
+            <nav id="navMenu" class="nav">
+                <a href="index.html">Sobre Mim</a>
+                <a href="experiencia.html">Experiência</a>
+                <a href="portfolio.html" class="active">Portfólio</a>
+                <a href="certificacoes.html" >Certificações</a>
+                <a href="linkedin.html">Linkedin - Posts Profissionais</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <button id="themeToggle" class="theme-btn">🌙</button>
+            <button id="mobileBtn" class="mobile-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container page-section">
+
+        <h2 class="page-title">Portfólio</h2>
+        <p class="subtitle">Projetos focados em automação de testes, backend e desenvolvimento moderno.</p>
+
+        <div class="projects-grid">
+
+            <!-- Meu Portfólio — Feito por mim -->
+            <div class="project-card">
+                <h3>Portfólio Pessoal</h3>
+                <p class="description">
+                    Este site foi projetado e desenvolvido do zero, mostrando minhas habilidades em HTML, CSS, JavaScript, UI/UX e testes de QA para garantir qualidade e funcionalidade.
+
+                </p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Site-Portfolio-Daniela-Foggiatto.git" target="_blank">
+                        Ver Código
+                    </a>
+                    <a class="btn-outline demo-btn" href="portfolio.html" target="_blank">
+                        Ver Site
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projeto 1 -->
+            <!-- CARD: Playwright -->
+            <div class="project-card">
+                <h3>Automação de Testes — Playwright</h3>
+                <p class="description">
+                    Suíte completa de testes E2E com Page Objects, relatórios e execução paralela.
+                </p>
+                <div class="tags">
+                    <span>Playwright</span>
+                    <span>TypeScript</span>
+                    <span>CI/CD</span>
+                    <span>Automação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Automa-ao-de-Testes-Playwright" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="import { test } from '@playwright/test';
+import * as helpers from './helpers';
+
+test('CT001: Validar filtro de data e botão filtrar', async ({ page }) => {
+  await helpers.setupPage(page);
+  
+  await page.click(helpers.selectors.dateFilterBtn);
+  await helpers.selectOption(page, helpers.selectors.selectControl, 'monthly');
+  await helpers.selectOption(page, helpers.selectors.selectControl, 'year');
+  await helpers.selectOption(page, helpers.selectors.selectControl, 'period');
+  await page.click(&quot;//*[@value='competencia']&quot;);
+  await page.click(helpers.selectors.saveButton);
+  
+  await helpers.assertNotVisible(page, helpers.selectors.titleLabel, 'Título do filtro');
+  console.log('✅ Filtro de data aplicado corretamente.');
+});
+
+test('CT002: Validar botão cancelar no filtro de data', async ({ page }) => {
+  await helpers.setupPage(page);
+  
+  await page.click(helpers.selectors.dateFilterBtn);
+  await page.click(helpers.selectors.cancelButton);
+  await helpers.assertNotVisible(page, helpers.selectors.titleLabel);
+  console.log('✅ Botão cancelar clicado corretamente.');
+});">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- CARD: Cypress -->
+            <div class="project-card">
+                <h3>Comandos Cypress</h3>
+                <p class="description">
+                    Biblioteca de comandos customizados em Cypress para testes automatizados mais expressivos e reutilizáveis.
+                </p>
+                <div class="tags">
+                    <span>Cypress</span>
+                    <span>JavaScript</span>
+                    <span>Automação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Cypress-Commands" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" 
+                        data-snippet="
+describe('Teste Funcional de Compra com Sucesso', () => {
+    it('Deve realizar login, adicionar 3 produtos ao carrinho 
+    e finalizar a compra com sucesso', () => {
+        cy.login_teste('standard_user', 'secret_sauce')
+
+        cy.get('[data-test=&quot;add-to-cart-sauce-labs-backpack&quot;]').click()
+        cy.get('[data-test=&quot;add-to-cart-sauce-labs-bike-light&quot;]').click()
+        cy.get('[data-test=&quot;add-to-cart-sauce-labs-bolt-t-shirt&quot;]').click()
+        cy.get('.shopping_cart_badge').should('have.text', '3')
+
+        //checkout
+        cy.get('.shopping_cart_link').click()
+        cy.get('[data-test=&quot;checkout&quot;]').click()
+        cy.get('[data-test=&quot;firstName&quot;]').type('João')
+        cy.get('[data-test=&quot;lastName&quot;]').type('Silva')
+        cy.get('[data-test=&quot;postalCode&quot;]').type('12345678')
+        cy.get('[data-test=&quot;continue&quot;]').click()
+        cy.get('[data-test=&quot;finish&quot;]').click()
+        cy.get('.complete-header').should('have.text', 
+        'Thank you for your order!')
+    })
+ })">
+                        Demo
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- CARD: Selenium UI -->
+            <div class="project-card">
+                <h3>Testes de Interface — Selenium</h3>
+                <p class="description">
+                    Automação de testes de interface com Selenium, explorando diferentes técnicas de localização de elementos e interações UI.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>Python</span>
+                    <span>UI Testing</span>
+                    <span>Automação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/testes-de-interface-selenium" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" 
+    data-snippet="def test_ct005_receitas_hamburguinho_check_uncheck(page):
+    # Lista dos IDs dos switches
+    switches = [
+        'sample-preset-income-totalReceived-switch',
+        'sample-preset-income-totalToReceive-switch',
+        'sample-preset-income-totalCommittedIncome-switch',
+        'sample-preset-expense-totalPaid-switch',
+        'sample-preset-expense-totalToPay-switch',
+        'sample-preset-expense-totalExpenses-switch',
+    ]
+    # Pega o botão menu apenas do primeiro card (Receitas)
+    page.locator('#main-cards-menu-btn').click()
+    for switch_id in switches:
+        switch = page.locator(f'#{switch_id}')
+        switch.wait_for(state='visible', timeout=5000)
+
+        # Estado inicial (true ou false)
+        estado_inicial = switch.get_attribute('aria-checked')
+        print(f'🔎 {switch_id} antes do clique: {estado_inicial}')
+
+        # Clica e valida mudança
+        switch.click()
+        if estado_inicial == 'true':
+            expect(switch).to_have_attribute('aria-checked', 'false')
+            print(f'✅ {switch_id} foi desmarcado')
+        else:
+            expect(switch).to_have_attribute('aria-checked', 'true')
+            print(f'✅ {switch_id} foi marcado')
+
+        # (opcional) volta ao estado original
+        switch.click()
+        expect(switch).to_have_attribute('aria-checked', estado_inicial)">
+    Demo
+</button>
+
+                </div>
+            </div>
+
+            <!-- CARD: Testes de Comparação -->
+           <div class="project-card">
+                <h3>Testes de Comparação — Automação Completa</h3>
+                <p class="description">
+                    Testes automatizados robustos envolvendo cenários complexos de filtros, validação de dados e lógica avançada de comparação. Um projeto completo que combina automação e programação de forma estratégica.
+                </p>
+                <div class="tags">
+                    <span>Automação</span>
+                    <span>Python</span>
+                    <span>Testes de Filtros</span>
+                    <span>Lógica e Comparação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/testes-de-comparacao-completo" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" 
+    data-snippet="from selenium.webdriver.common.by import By
+from selenium_utils import esperar_ficar_visivel
+
+# Função criada para agrupar os dados dos vários cenários(empresas) utilizados como parâmetro no teste 'dropdown_filtros_test'
+def verificar_valores_por_indice(driver, valores_esperados_dict):
+    ordem_chaves = [
+        'receitas_total_recebido',
+        'receitas_total_a_receber',
+        'receitas_comprometido',
+        'despesas_total_pago',
+        'despesas_total_a_pagar',
+        'despesas_comprometido'
+    ]
+
+    for i, chave in enumerate(ordem_chaves, start=1):
+        valor_esperado = valores_esperados_dict[chave]
+        xpath = f'(//h2[contains(@class, '_value')])[{i}]'
+        elemento = esperar_ficar_visivel(driver, By.XPATH, xpath)
+        texto = elemento.text.replace('\u00a0', ' ').strip()
+        assert valor_esperado in texto, f&quot;Esperado '{valor_esperado}' no elemento {i} ({chave}), mas achou '{texto}'&quot;
+
+
+cenarios = [
+    (
+        '1 - Centro Anon - 1',
+        {
+            'receitas_total_recebido': 'R$ XXX,XX',
+            'receitas_total_a_receber': 'R$ XXX,XX',
+            'receitas_comprometido': 'R$ XXX,XX',
+            'despesas_total_pago': 'R$ XXX,XX',
+            'despesas_total_a_pagar': 'R$ XXX,XX',
+            'despesas_comprometido': 'R$ XXX,XX'
+        }
+    ),
+    (
+        '2 - Centro Anon - 2',
+        {
+            'receitas_total_recebido': 'R$ 0,00',
+            'receitas_total_a_receber': 'R$ 0,00',
+            'receitas_comprometido': 'R$ 0,00',
+            'despesas_total_pago': 'R$ 0,00',
+            'despesas_total_a_pagar': 'R$ 0,00',
+            'despesas_comprometido': 'R$ 0,00'
+        }
+    ),
+    (
+        '3 - Centro Anon - 3',
+        {
+            'receitas_total_recebido': 'R$ XXX,XX',
+            'receitas_total_a_receber': 'R$ 0,00',
+            'receitas_comprometido': 'R$ XXX,XX',
+            'despesas_total_pago': 'R$ 0,00',
+            'despesas_total_a_pagar': 'R$ 0,00',
+            'despesas_comprometido': 'R$ 0,00'
+        }
+    ),
+    (
+        '4 - Centro Anon - 4',
+        {
+            'receitas_total_recebido': 'R$ 0,00',
+            'receitas_total_a_receber': 'R$ 0,00',
+            'receitas_comprometido': 'R$ 0,00',
+            'despesas_total_pago': 'R$ XXX,XX',
+            'despesas_total_a_pagar': 'R$ XXX,XX',
+            'despesas_comprometido': 'R$ XXX,XX'
+        }
+    ),
+    (
+        '6 - Centro Anon - 6',
+        {
+            'receitas_total_recebido': 'R$ 0,00',
+            'receitas_total_a_receber': 'R$ 0,00',
+            'receitas_comprometido': 'R$ 0,00',
+            'despesas_total_pago': 'R$ 0,00',
+            'despesas_total_a_pagar': 'R$ 0,00',
+            'despesas_comprometido': 'R$ 0,00'
+        }
+    )
+]">
+    Demo
+</button>
+
+                </div>
+            </div>
+
+
+           
+            <!-- CI com GitHub Actions — Automação -->
+            <div class="project-card">
+                <h3>CI com GitHub Actions — Automação</h3>
+                <p class="description">
+                    Exemplos práticos de workflows GitHub Actions para automação de testes, integração contínua e execução de scripts, com YAML simples e fácil de entender.
+                </p>
+                <div class="tags">
+                    <span>GitHub Actions</span>
+                    <span>CI/CD</span>
+                    <span>Automação</span>
+                    <span>DevOps</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Descomplicando-GitHub-Actions" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="
+name: &quot;Nível 1: Basic CI&quot;
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '18'
+  CHALLENGE_LEVEL: 1
+  CHALLENGE_NAME: &quot;first-steps&quot;
+
+jobs:
+  basic-setup:
+    name: &quot;Setup &amp; Basic Checks&quot;
+    runs-on: ubuntu-latest
+    
+    outputs:
+      node-version: ${{ steps.setup.outputs.node-version }}
+      challenge-status: ${{ steps.challenge.outputs.status }}
+    
+    steps:
+      - name: &quot;Checkout do código&quot;
+        uses: actions/checkout@v4
+        
+      - name: &quot;Setup Node.js&quot;
+        id: setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Teste com Cucumber + Playwright -->
+            <div class="project-card">
+                <h3>Teste com Cucumber + Playwright</h3>
+                <p class="description">
+                    Automação de testes E2E com Playwright usando Cucumber (BDD) e TypeScript, organizando cenários de forma clara e legível.
+                </p>
+                <div class="tags">
+                    <span>Playwright</span>
+                    <span>Cucumber</span>
+                    <span>TypeScript</span>
+                    <span>BDD</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Teste-com-Cucumber-Playwright-TS" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="import { Given, When, Then } from &quot;@cucumber/cucumber&quot;;
+import { expect } from &quot;@playwright/test&quot;;
+import { chromium, Browser, Page } from &quot;playwright&quot;;
+
+let browser: Browser;
+let page: Page;
+let cartCount: number = 0;
+
+Given(&quot;I navigate to the products page&quot;, { timeout: 20000 }, async () =&gt; {
+  browser = await chromium.launch({ headless: false });
+  page = await browser.newPage();
+  await page.goto(&quot;https://example.com/products&quot;,
+    { waitUntil: &quot;domcontentloaded&quot; });
+});
+
+When(&quot;I load the products page&quot;, async () =&gt; {
+  await page.reload();
+});
+
+Then(&quot;I should see at least one product&quot;, async () =&gt; {
+  const products = await page.locator(&quot;.product-item&quot;).count();
+  expect(products).toBeGreaterThan(0);
+});
+
+Then(&quot;I should see product name, price and description&quot;, async () =&gt; {
+  const productName = await page.locator(&quot;.product-name&quot;).innerText();
+  const productPrice = await page.locator(&quot;.product-price&quot;).innerText();
+  expect(productName).toBeTruthy();
+  expect(productPrice).toBeTruthy();
+});">Demo</button>
+
+                </div>
+            </div>
+
+             <!-- CARD: Test Automation Practice Page -->
+            <div class="project-card">
+                <h3>Test Automation Practice Page</h3>
+                <p class="description">
+                    Automação completa com waits inteligentes, asserts e estrutura organizada em Selenium + Python.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>Python</span>
+                    <span>QA</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Test-Automation-Practice-Page" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" 
+    data-snippet="from selenium.webdriver.common.by import By
+import pytest
+
+@pytest.mark.iframe
+def test_CT010_iframe(driver):
+    iframe1 = driver.find_element(By.XPATH, '//*[text()=&quot;iFrame Test&quot;]')
+
+    iframe2 = driver.find_element(By.ID, 'test-iframe')
+    driver.switch_to.frame(iframe2)
+
+    link = driver.find_element(By.XPATH, 
+        '//*[text()=&quot;More information...&quot;]')
+
+    assert link.is_displayed()">
+    Demo
+</button>
+
+                </div>
+            </div>
+
+            <!-- SauceDemo — Page Object Model -->
+            <div class="project-card">
+                <h3>SauceDemo — Page Object Model</h3>
+                <p class="description">
+                    Framework POM com login, inventário, carrinho e fluxo completo de compras automatizado.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>Python</span>
+                    <span>POM</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/SauceDemo_with_pages---Portfolio-QA" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="from selenium import webdriver
+from selenium.webdriver.common.by import By
+import pytest
+import conftest
+
+@pytest.mark.usefixtures(&quot;setup_teardown&quot;)
+class TestCT04:
+    def test_ct04_finalizar_compra_2prod(self):
+        driver = conftest.driver
+
+        driver.find_element(By.ID, &quot;user-name&quot;).send_keys(&quot;standard_user&quot;)
+        driver.find_element(By.ID, &quot;password&quot;).send_keys(&#x27;secret_sauce&#x27;)
+        driver.find_element(By.ID, &quot;login-button&quot;).click()
+
+        driver.find_element(By.XPATH, &quot;//div[text()=&#x27;Sauce Labs Backpack&#x27;]&quot;).click()
+
+        driver.find_element(By.XPATH, &quot;//*[text()=&#x27;Add to cart&#x27;]&quot;).click()
+
+        driver.find_element(By.XPATH, &quot;//*[@class=&#x27;shopping_cart_link&#x27;]&quot;).click()
+
+        driver.find_element(By.ID, &quot;continue-shopping&quot;).click()
+        driver.find_element(By.XPATH, &quot;//div[text()=&#x27;Sauce Labs Bolt T-Shirt&#x27;]&quot;).click()
+        driver.find_element(By.XPATH, &quot;//*[text()=&#x27;Add to cart&#x27;]&quot;).click()
+        driver.find_element(By.XPATH, &quot;//*[@class=&#x27;shopping_cart_link&#x27;]&quot;).click()
+
+        driver.find_element(By.XPATH, &quot;//*[@id=&#x27;checkout&#x27;]&quot;).click()
+        driver.find_element(By.ID, &quot;first-name&quot;).send_keys(&quot;Daniela&quot;)
+        driver.find_element(By.ID, &quot;last-name&quot;).send_keys(&quot;Foggiatto&quot;)
+        driver.find_element(By.ID, &quot;postal-code&quot;).send_keys(&quot;12345&quot;)
+        driver.find_element(By.ID, &quot;continue&quot;).click()
+        driver.find_element(By.ID, &quot;finish&quot;).click()">
+Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Testes — DemoQA Automação -->
+            <div class="project-card">
+                <h3>Testes — DemoQA Automação</h3>
+                <p class="description">
+                    Automação de interface no site DemoQA, com testes de botões, formulários, alertas e interação com componentes.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>UI Testing</span>
+                    <span>JavaScript</span>
+                    <span>Automação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/DemoQA---Portfolio-QA" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import os
+
+def test_upload_download(driver):
+   
+    driver.get('https://demoqa.com/upload-download')
+
+    file_path = r'C:\\Users\\danie\\Desktop\\TestFile.txt' 
+    upload_input = driver.find_element(By.ID, 'uploadFile')
+    upload_input.send_keys(file_path)
+
+    uploaded_file_name = driver.find_element(By.ID, 'uploadedFilePath').text
+    assert 'TestFile.txt' in uploaded_file_name
+
+    download_btn = driver.find_element(By.ID, 'downloadButton')
+    download_btn.click()
+
+    download_path = r'C:\\Users\\danie\\Downloads\\TestFiles\\sampleFile.jpeg'
+    WebDriverWait(driver, 10).until(lambda d: os.path.exists(download_path))
+    assert os.path.exists(download_path)">
+    Demo
+</button>
+
+                </div>
+            </div>
+
+            <!-- Exercícios QA -->
+            <div class="project-card">
+                <h3>Exercícios QA</h3>
+                <p class="description">
+                    Conjunto de exercícios para praticar testes automatizados e manuais, cobrindo validação, assertions e fluxos típicos de QA.
+                </p>
+                <div class="tags">
+                    <span>QA</span>
+                    <span>Testes</span>
+                    <span>Automação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Exercicios-QA_teste" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support.select import Select
+from selenium.webdriver.common.by import By
+
+browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+browser.implicitly_wait(10)
+
+browser.maximize_window()
+browser.get('https://chercher.tech/practice/practice-dropdowns-selenium-webdriver')
+
+dropdown_products = Select(browser.find_element(By.XPATH, '//select[@id=&quot;first&quot;]'))
+dropdown_products.select_by_visible_text('Google')
+
+dropdown_animals = Select(browser.find_element(By.XPATH, '//select[@id=&quot;animals&quot;]'))
+dropdown_animals.select_by_value('babycat')
+dropdown_animals.select_by_index(4)
+
+dropdown_food = Select(browser.find_element(By.XPATH, '//select[@id=&quot;second&quot;]'))
+dropdown_food.select_by_visible_text('Pizza')
+dropdown_food.select_by_value('cheese')">
+    Demo
+</button>
+
+                </div>
+            </div>
+
+            
+
+            <!-- Automation Exercises -->
+            <div class="project-card">
+                <h3>Automation Exercises</h3>
+                <p class="description">
+                    Coleção de exercícios focando em XPath, asserts, page actions e boas práticas de automação.
+                </p>
+                <div class="tags">
+                    <span>Selenium</span>
+                    <span>Python</span>
+                    <span>QA</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/AUTOMATION-EXERCICE---Portfolio-QA" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="def test_cadastro_login(driver):
+    driver.get('https://automationexercise.com/login')
+    
+    WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.NAME, 'name'))
+    )
+    driver.find_element(By.NAME, 'name').send_keys('Daniela')
+    
+    email = random_email()
+    driver.find_element(By.XPATH, '//input[@data-qa=&quot;signup-email&quot;]').send_keys(email)
+    driver.find_element(By.XPATH, '//button[@data-qa=&quot;signup-button&quot;]').click()
+
+    WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.ID, 'id_gender2'))
+    )
+    driver.find_element(By.ID, 'id_gender2').click()
+    driver.find_element(By.ID, 'password').send_keys('Senha123!')
+    driver.find_element(By.ID, 'days').send_keys('10')
+    driver.find_element(By.ID, 'months').send_keys('May')
+    driver.find_element(By.ID, 'years').send_keys('1990')
+    driver.find_element(By.ID, 'first_name').send_keys('Daniela')
+    driver.find_element(By.ID, 'last_name').send_keys('Foggiatto')
+    driver.find_element(By.ID, 'address1').send_keys('Rua Exemplo, 123')
+    driver.find_element(By.ID, 'country').send_keys('Canada')
+    driver.find_element(By.ID, 'state').send_keys('StateX')
+    driver.find_element(By.ID, 'city').send_keys('Florianópolis')
+    driver.find_element(By.ID, 'zipcode').send_keys('88000-000')
+    driver.find_element(By.ID, 'mobile_number').send_keys('48999999999')
+    driver.find_element(By.XPATH, '//button[@data-qa=&quot;create-account&quot;]').click()
+
+    account_msg = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, '//b[text()=&quot;Account Created!&quot;]'))
+    ).text
+    assert account_msg == 'Account Created!'">Demo</button>
+
+                </div>
+            </div>
+            
+<!-- Testes Manuais — Tester QA -->
+            <div class="project-card">
+                <h3>Testes Manuais — Tester QA</h3>
+                <p class="description">
+                    Conjunto organizado de casos de teste manuais, cobrindo cenários funcionais, exploratórios e testes de borda, com documentação clara e reproduzível.
+                </p>
+                <div class="tags">
+                    <span>QA</span>
+                    <span>Testes Manuais</span>
+                    <span>Documentação</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Tester-QA" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="Tester-QA
+Este repositório reúne casos de teste manuais organizados para diferentes cenários, com foco em qualidade, execução manual estruturada e documentação clara de critérios de aceitação. Ideal para demonstrar habilidades de QA sem automatização e para uso prático em processos de teste exploratório.
+
+🎯 Objetivo
+Documentar e organizar casos de teste manuais bem estruturados.
+Simular testes exploratórios, funcionais e de borda para validar fluxos de uso real.
+Demonstrar domínio em planejamento de teste sem depender exclusivamente de automação.
+Facilitar a reprodução de cenários por outros testadores e stakeholders.">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Clínica Médica — C# -->
+            <div class="project-card">
+                <h3>Clínica Médica — C#</h3>
+                <p class="description">
+                    Sistema em camadas com cadastro de médicos, pacientes e agendamentos.
+                </p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>OOP</span>
+                    <span>Camadas</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Sitema-de-Agendamento---Clinica-Medica" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="using ClinicaMedica.Data;
+using ClinicaMedica.Domain;
+using ClinicaMedica.Services;
+using Microsoft.EntityFrameworkCore;
+
+var context = new ClinicaContext();
+context.Database.EnsureCreated();
+
+var consultaService = new ConsultaService(context);
+
+bool continuar = true;
+
+while (continuar)
+{
+    Console.WriteLine(&quot;\n--- MENU CLÍNICA ---&quot;);
+    Console.WriteLine(&quot;1. Cadastrar Paciente&quot;);
+    Console.WriteLine(&quot;2. Cadastrar Médico&quot;);
+    Console.WriteLine(&quot;3. Agendar Consulta&quot;);
+    Console.WriteLine(&quot;4. Listar Consultas&quot;);
+    Console.WriteLine(&quot;5. Sair&quot;);
+    Console.Write(&quot;Escolha: &quot;);
+    var opcao = Console.ReadLine();
+
+    switch (opcao)
+    {
+        case &quot;1&quot;:
+            Console.Write(&quot;Nome: &quot;);
+            var nomeP = Console.ReadLine();
+            Console.Write(&quot;CPF: &quot;);
+            var cpf = Console.ReadLine();
+            Console.Write(&quot;Data de nascimento (yyyy-mm-dd): &quot;);
+            var nasc = DateTime.Parse(Console.ReadLine());
+            Console.Write(&quot;Telefone: &quot;);
+            var tel = Console.ReadLine();
+
+            var paciente = new Paciente { Nome = nomeP, CPF = cpf, DataNascimento = nasc, NumTelefone = tel };
+            context.Pacientes.Add(paciente);
+            context.SaveChanges();
+            Console.WriteLine(&quot;Paciente cadastrado.&quot;);
+            break;
+    }
+}">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Biblioteca Console — C# -->
+            <div class="project-card">
+                <h3>Biblioteca Console — C#</h3>
+                <p class="description">
+                    Sistema com OOP, encapsulamento, polimorfismo e controle de usuários/livros.
+                </p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>OOP</span>
+                    <span>Console</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Biblioteca_Console" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="public static void MenuDeLeitores()
+{
+    CadastroLeitor cadastroLeitor = new CadastroLeitor();
+
+    bool emMenu = true;
+
+    while (emMenu)
+    {
+        Console.WriteLine(&quot;=== Leitor ===&quot;);
+        Console.WriteLine(&quot;1. Cadastrar&quot;);
+        Console.WriteLine(&quot;2. Editar&quot;);
+        Console.WriteLine(&quot;3. Remover&quot;);
+        Console.WriteLine(&quot;4. Buscar por Nome&quot;);
+        Console.WriteLine(&quot;5. Buscar por Matrícula&quot;);
+        Console.WriteLine(&quot;6. Listar Leitores&quot;);
+        Console.WriteLine(&quot;7 Voltar&quot;);
+
+        int opcao = Program.LerInteiro(&quot;Digite a opção: &quot;);
+
+        switch (opcao)
+        {
+            case 1:
+                cadastroLeitor.AddLeitor();
+                break;
+
+            case 2:
+                int matricula = Program.LerInteiro(&quot;Digite a matrícula do leitor: &quot;);
+
+                Console.Write(&quot;Digite o novo nome do leitor: &quot;);
+                string novoNome = Console.ReadLine();
+
+                bool editado = Leitor.EditarLeitor(matricula, novoNome);
+
+                if (editado)
+                {
+                    Leitor.SalvarEmArquivo();
+                    Console.WriteLine(&quot;Leitor editado com sucesso!&quot;);
+                }
+                else
+                {
+                    Console.WriteLine(&quot;Leitor não encontrado.&quot;);
+                }
+
+                break;
+        }
+    }
+}">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Sistema de Agenda — C# -->
+            <div class="project-card">
+                <h3>Sistema de Agenda — C#</h3>
+                <p class="description">
+                    Agenda de compromissos com JSON, exceções e arquitetura limpa em C#.
+                </p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>JSON</span>
+                    <span>OOP</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Agenda_de_Compromissos" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="namespace Agenda_de_Compromissos
+{
+    public class Compromisso
+    {
+        public int Id { get; set; }
+        public string Titulo { get; set; }
+        public DateTime Data { get; set; }
+        public string Local { get; set; }
+        public string Descricao { get; set; }
+
+        public Compromisso(int id, string titulo, DateTime data, string local, string descricao)
+        {
+            Id = id;
+            Titulo = titulo;
+            Data = data;
+            Local = local;
+            Descricao = descricao;
+        }
+
+        public override string ToString()
+        {
+            return $"{Id}: {Titulo} | {Data:dd/MM/yyyy HH:mm} | {Local} | {Descricao}";
+        }
+
+        public string Serializar()
+        {
+            return $"{Id}; {Titulo}; {Data:o}; {Local}; {Descricao}";
+        }
+    }
+}">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Clone Microsoft -->
+            <div class="project-card">
+                <h3>Clone Microsoft</h3>
+                <p class="description">
+                    Interface moderna inspirada no site oficial da Microsoft.
+                </p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Microsoft" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!--Add ícone do font awesome-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'>
+    <link rel='stylesheet' href='./css/style.css'>
+    <title>Micosoft Official Homepage</title>
+    <link rel='icon' href='./img/favicon.ico'>
+</head>
+<body>
+    <div class='menu-btn'>
+        <i class='fas fa-bars fa-2x'></i>
+    </div>
+
+    <div class='container'>
+        <nav class='main-nav'>
+            <img src='./img/logo.png' alt='Microsoft' class='logo'>
+            <ul class='main-menu show'>
+                <li><a href='#'>Office</a></li>
+                <li><a href='#'>Windows</a></li>
+                <li><a href='#'>Surface</a></li>
+                <li><a href='#'>Xbox</a></li>
+                <li><a href='#'>Deals</a></li>
+                <li><a href='#'>Support</a></li>
+            </ul>">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Clone Netflix -->
+            <div class="project-card">
+                <h3>Clone Netflix</h3>
+                <p class="description">
+                    Layout responsivo com carrossel e efeitos modernos.
+                </p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Netflix" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="const tabItems = document.querySelectorAll('.tab-item');
+const tabContentItems = document.querySelectorAll('.tab-content-item');
+
+//Select tab content item
+function selectItem(e) {
+    removeBorder();
+    removeShow();
+    //Add border to current tab
+    this.classList.add('tab-border');
+    //Grab content item from DOM
+    const tabContentItem = document.querySelector(`#${this.id}-content`);
+    //Add show class
+    tabContentItem.classList.add('show');
+}
+
+function removeBorder() {
+    tabItems.forEach(item => item.classList.remove('tab-border'));
+}
+
+function removeShow() {
+    tabContentItems.forEach(item => item.classList.remove('show'));
+}
+
+//Listen for tab click
+tabItems.forEach(item => item.addEventListener('click', selectItem));">Demo</button>
+
+                </div>
+            </div>
+
+            <!-- Candlelight — E-commerce -->
+            <div class="project-card">
+                <h3>Candlelight — E-commerce</h3>
+                <p class="description">
+                    E-commerce moderno combinando Html, Css e JavaScript
+                </p>
+                <div class="tags">
+                    <span>Html</span>
+                    <span>Css</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Candlelight" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>Detalhes do Produto</title>
+
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
+  <link rel='stylesheet' href='../assets/css/style.css' /> 
+</head>
+
+<body>
+    <header>
+        <div id='navbar'></div>
+    </header>
+    <div id='conteudo'></div>
+
+  <div id='detalhe-produto'></div>
+  <div id='carrosel-inicio'></div>
+ 
+  <footer class='bg-success text-white py-4 mt-5'>
+        <div class='container'>
+            <div class='row text-center text-md-start'>
+            
+            <div class='col-md-4 mb-3'>
+                <h5>Candle Light</h5>
+                <p>Velas artesanais feitas com carinho e propósito.</p>
+            </div>">Demo</button>
+
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <h3>Sophia Photography</h3>
+                <p class="description">
+                    Site autoral com jQuery, Bootstrap e galeria responsiva.
+                </p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <div class="buttons">
+                    <a class="btn-outline code-btn" href="https://github.com/danielafoggiatto/Sophia-Photography--Projeto-Autoral/" target="_blank">Ver Código</a>
+                    <button class="btn-outline demo-btn" data-snippet="function carregarConteudo(pagina) {
+var conteudo = document.getElementById('conteudo');
+
+switch (pagina) {
+case 'home':
+{
+    fetch('home.html')
+        .then(response => response.text())  
+        .then(data => {
+            conteudo.innerHTML = data;  
+        })
+        .catch(error => {
+            console.error('Erro ao carregar o conteúdo:', error);
+        });    
+}            
+break;
+
+case 'services':
+{
+    fetch('services.html')
+        .then(response => response.text())  
+        .then(data => {
+            conteudo.innerHTML = data;  
+        })
+        .catch(error => {
+            console.error('Erro ao carregar o conteúdo:', error);
+        });      
+}
+break;">Demo</button>
+
+                </div>
+            </div>
+
+
+            <!-- MODAL ÚNICO -->
+            <div id="codeModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <pre class="code-snippet"><code id="modalCode"></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </main>
+    <div class="badge-dev">
+        Projetado, desenvolvido e testado  
+        <br>por Daniela Foggiatto
+    </div>
+    <footer class="footer">
+        © 2025 - Daniela Foggiatto • Portfólio desenvolvido por mim
+    </footer>
+</body>
+</html>

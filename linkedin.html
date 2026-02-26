@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts Profissionais • Daniela Foggiatto</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Daniela Foggiatto</h1>
+
+            <nav id="navMenu" class="nav">
+                <a href="index.html">Sobre Mim</a>
+                <a href="experiencia.html">Experiência</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="certificacoes.html">Certificações</a>
+                <a href="linkedin.html" class="active">Linkedin - Posts Profissionais</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <button id="themeToggle" class="theme-btn">🌙</button>
+            <button id="mobileBtn" class="mobile-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container page-section">
+
+        <h2 class="page-title">Posts Profissionais</h2>
+        <p class="subtitle">Aqui compartilho publicações relacionadas ao meu trabalho em QA, automação e desenvolvimento.</p>
+
+        <ul class="linkedin-grid">
+            <li class="linkedin-card">
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7392558213767774208" target="_blank">
+                    <img src="img/posts/post1.png" alt="Post LinkedIn 1">
+                    <div class="linkedin-hover">Clique para ver o post completo</div>
+                </a>
+            </li>
+
+            <li class="linkedin-card">
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7395085620865404928" target="_blank">
+                    <img src="img/posts/post2.png" alt="Post LinkedIn 2">
+                    <div class="linkedin-hover">Clique para ver o post completo</div>
+                </a>
+            </li>
+
+            <li class="linkedin-card">
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7391179537650372609" target="_blank">
+                    <img src="img/posts/post3.png" alt="Post LinkedIn 3">
+                    <div class="linkedin-hover">Clique para ver o post completo</div>
+                </a>
+            </li>
+
+            <li class="linkedin-card">
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7389004102682349568" target="_blank">
+                    <img src="img/posts/post4.png" alt="Post LinkedIn 4">
+                    <div class="linkedin-hover">Clique para ver o post completo</div>
+                </a>
+            </li>
+
+            <li class="linkedin-card">
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7394800768261795840" target="_blank">
+                    <img src="img/posts/post5.png" alt="Post LinkedIn 5">
+                    <div class="linkedin-hover">Clique para ver o post completo</div>
+                </a>
+            </li>
+
+            <li class="linkedin-card">
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7393696583252430848" target="_blank">
+                    <img src="img/posts/post6.png" alt="Post LinkedIn 6">
+                    <div class="linkedin-hover">Clique para ver o post completo</div>
+                </a>
+            </li>
+
+            <li class="linkedin-card">
+                <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7393671851639455744" target="_blank">
+                    <img src="img/posts/post7.png" alt="Post LinkedIn 7">
+                    <div class="linkedin-hover">Clique para ver o post completo</div>
+                </a>
+            </li>
+
+            <li class="linkedin-card">
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7394753574087430145" target="_blank">
+                    <img src="img/posts/post8.png" alt="Post LinkedIn 8">
+                    <div class="linkedin-hover">Clique para ver o post completo</div>
+                </a>
+            </li>
+
+        </ul>
+
+    </main>
+    <div class="badge-dev">
+        Projetado, desenvolvido e testado  
+        <br>por Daniela Foggiatto
+    </div>
+    <footer class="footer">
+        © 2025 - Daniela Foggiatto • Portfólio desenvolvido por mim
+    </footer>
+</body>
+</html>

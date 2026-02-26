@@ -11,8 +11,14 @@ const navMenu = document.getElementById("navMenu");
 // =====================================
 const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme === "dark") {
+// Se já existe tema salvo → usa ele
+if (savedTheme) {
+    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+} 
+// Se NÃO existe nada salvo → começa no dark
+else {
     document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
 }
 
 
